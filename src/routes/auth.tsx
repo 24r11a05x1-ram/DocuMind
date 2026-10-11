@@ -112,19 +112,15 @@ function AuthPage() {
       });
 
       if (error) {
-        // Fallback to Lovable cloud OAuth
-        const r = await lovable.auth.signInWithOAuth("google", {
-          redirect_uri: `${window.location.origin}/chat`,
-        });
-        if (r?.error) {
-          toast.error(
-            r.error.message ||
-              "Google OAuth requires OAuth credentials configured in Supabase. You can sign in instantly with Demo Login below.",
-          );
-        }
+        toast.info("Google OAuth requires Supabase project keys. Signing in with Instant Demo profile...");
+        await quickDemoLogin();
+      } else {
+        toast.success("Signed in with Google!");
+        nav({ to: "/chat", replace: true });
       }
-    } catch (e) {
-      toast.error("Google sign-in is not configured yet. Please use Demo Account or Email/Password.");
+    } catch {
+      toast.info("Signing in with Instant Demo profile...");
+      await quickDemoLogin();
     } finally {
       setBusy(false);
     }

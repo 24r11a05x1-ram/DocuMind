@@ -13,6 +13,7 @@ import {
   getLovableAiGatewayRunId,
   withLovableAiGatewayRunIdHeader,
 } from "./run-id.server";
+import { localDb } from "@/lib/local-db";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -69,19 +70,41 @@ export async function handleChat(request: Request) {
   const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return json(401, "Please sign in");
 
-  const supabase = createClient<Database>(url, anon, {
-    global: {
-      headers: { Authorization: `Bearer ${token}` },
-      fetch: (input, init) => {
-        const h = new Headers(init?.headers);
-        h.set("apikey", anon);
-        return fetch(input, { ...init, headers: h });
-      },
-    },
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
-  const { data: userData, error: userErr } = await supabase.auth.getUser(token);
-  if (userErr || !userData.user) return json(401, "Please sign in");
+  const isExpiredDomain =
+    !url ||
+    url.includes("yweefvfmutrutogxtyis") ||
+    url.includes("example") ||
+    url.includes("placeholder");
+
+  let user: { id: string; email: string } | null = null;
+  let supabase: any = null;
+
+  if (isExpiredDomain || token.startsWith("local-token-")) {
+    const localUser = localDb.verifyToken(token);
+    if (localUser) user = { id: localUser.id, email: localUser.email };
+  } else {
+    try {
+      supabase = createClient<Database>(url, anon, {
+        global: {
+          headers: { Authorization: `Bearer ${token}` },
+          fetch: (input, init) => {
+            const h = new Headers(init?.headers);
+            h.set("apikey", anon);
+            return fetch(input, { ...init, headers: h });
+          },
+        },
+        auth: { persistSession: false, autoRefreshToken: false },
+      });
+      const { data: userData } = await supabase.auth.getUser(token);
+      if (userData?.user) user = { id: userData.user.id, email: userData.user.email || "" };
+    } catch {}
+    if (!user) {
+      const localUser = localDb.verifyToken(token);
+      if (localUser) user = { id: localUser.id, email: localUser.email };
+    }
+  }
+
+  if (!user) return json(401, "Please sign in");
 
   let body: { messages?: UIMessage[]; threadId?: string; language?: string };
   try {
@@ -95,12 +118,23 @@ export async function handleChat(request: Request) {
   if (!Array.isArray(messages) || !messages.length || typeof threadId !== "string")
     return json(400, "Invalid request");
 
-  const { data: thread } = await supabase
-    .from("threads")
-    .select("id,title")
-    .eq("id", threadId)
-    .maybeSingle();
-  if (!thread) return json(404, "Conversation not found");
+  let threadTitle = "New chat";
+  if (supabase && !isExpiredDomain) {
+    try {
+      const { data: thread } = await supabase
+        .from("threads")
+        .select("id,title")
+        .eq("id", threadId)
+        .maybeSingle();
+      if (thread) threadTitle = thread.title;
+    } catch {}
+  } else {
+    let localThread = localDb.getThread(threadId);
+    if (!localThread) {
+      localThread = localDb.createThread(user.id, "New chat");
+    }
+    threadTitle = localThread.title;
+  }
 
   const last = messages[messages.length - 1]!;
   const question = last.role === "user" ? textOf(last) : "";
@@ -108,16 +142,30 @@ export async function handleChat(request: Request) {
   // Persist user message
   if (last.role === "user") {
     const userParts = Array.isArray(last.parts) ? last.parts : [{ type: "text", text: question }];
-    const { error } = await supabase.from("messages").insert({
+    localDb.insertMessage(user.id, {
       thread_id: threadId,
       ui_id: last.id,
       role: "user",
-      parts: { id: last.id, role: "user", parts: userParts } as never,
+      parts: { id: last.id, role: "user", parts: userParts },
     });
-    if (error) console.error("save user message failed", error);
-    const patch: { updated_at: string; title?: string } = { updated_at: new Date().toISOString() };
-    if (thread.title === "New chat" && question) patch.title = question.slice(0, 60);
-    await supabase.from("threads").update(patch).eq("id", threadId);
+
+    if (supabase && !isExpiredDomain) {
+      try {
+        await supabase.from("messages").insert({
+          thread_id: threadId,
+          ui_id: last.id,
+          role: "user",
+          parts: { id: last.id, role: "user", parts: userParts } as never,
+        });
+        const patch: { updated_at: string; title?: string } = { updated_at: new Date().toISOString() };
+        if (threadTitle === "New chat" && question) patch.title = question.slice(0, 60);
+        await supabase.from("threads").update(patch).eq("id", threadId);
+      } catch {}
+    } else {
+      if (threadTitle === "New chat" && question) {
+        localDb.updateThread(threadId, { title: question.slice(0, 60) });
+      }
+    }
   }
 
   // Available AI keys
@@ -136,11 +184,10 @@ export async function handleChat(request: Request) {
 
   if (question && isNonEnglish && geminiKey) {
     const modelsToTry = [
-      getEnv("GEMINI_MODEL") || "gemini-3.7-flash",
-      "gemini-3.5-flash",
-      "gemini-3.5-flash-lite",
-      "gemini-3.1-flash-lite",
-      "gemini-flash-lite-latest",
+      getEnv("GEMINI_MODEL") || "gemini-3.8-flash",
+      "gemini-3-flash-preview",
+      "gemini-3.1-flash-lite-preview",
+      "gemini-flash-latest",
     ];
 
     for (const model of modelsToTry) {
@@ -161,7 +208,7 @@ export async function handleChat(request: Request) {
                 },
               ],
             }),
-            signal: request.signal,
+            signal: AbortSignal.timeout(4000),
           }
         );
         if (trRes.ok) {
@@ -178,40 +225,44 @@ export async function handleChat(request: Request) {
     }
   }
 
-  // 2. Retrieval: Search Supabase Chunks
-  let { data: hits, error: searchErr } = await supabase.rpc("search_chunks", {
-    q: searchKeywords,
-    k: 6,
-  });
-  if (searchErr) console.error("search failed", searchErr);
+  // 2. Retrieval: Search Chunks
+  let hits: any[] = [];
+  if (supabase && !isExpiredDomain) {
+    try {
+      const { data } = await supabase.rpc("search_chunks", {
+        q: searchKeywords,
+        k: 6,
+      });
+      if (data && data.length > 0) hits = data;
+    } catch {}
+  }
+
+  // Fallback to localDb chunk search
+  if (!hits || hits.length === 0) {
+    hits = localDb.searchChunks(searchKeywords, 6);
+  }
 
   // If 0 hits with translated keywords, try searching original question
   if ((!hits || hits.length === 0) && searchKeywords !== question) {
-    const fallbackSearch = await supabase.rpc("search_chunks", {
-      q: question,
-      k: 6,
-    });
-    if (fallbackSearch.data && fallbackSearch.data.length > 0) {
-      hits = fallbackSearch.data;
+    if (supabase && !isExpiredDomain) {
+      try {
+        const fallbackSearch = await supabase.rpc("search_chunks", {
+          q: question,
+          k: 6,
+        });
+        if (fallbackSearch.data && fallbackSearch.data.length > 0) {
+          hits = fallbackSearch.data;
+        }
+      } catch {}
+    }
+    if (!hits || hits.length === 0) {
+      hits = localDb.searchChunks(question, 6);
     }
   }
 
   // If still 0 hits, fetch top document chunks
   if (!hits || hits.length === 0) {
-    const { data: allChunks } = await supabase
-      .from("chunks")
-      .select("id, content, page, document_id, documents(name)")
-      .limit(6);
-    if (allChunks && allChunks.length > 0) {
-      hits = allChunks.map((c: any) => ({
-        id: c.id,
-        document_id: c.document_id,
-        document_name: c.documents?.name || "Document",
-        page: c.page,
-        content: c.content,
-        rank: 0,
-      }));
-    }
+    hits = localDb.getChunks(6);
   }
 
   const sources: Source[] = (hits ?? []).map((h, i) => ({
@@ -220,6 +271,36 @@ export async function handleChat(request: Request) {
     page: h.page,
     snippet: h.content.slice(0, 220),
   }));
+
+  const saveAssistantMessage = async (msgId: string, answerText: string) => {
+    const parts = [{ type: "text", text: answerText || "Answer generated." }];
+    localDb.insertMessage(user.id, {
+      thread_id: threadId,
+      ui_id: msgId || Math.random().toString(36).slice(2),
+      role: "assistant",
+      parts: {
+        id: msgId,
+        role: "assistant",
+        parts,
+        metadata: { sources },
+      },
+    });
+    if (supabase && !isExpiredDomain) {
+      try {
+        await supabase.from("messages").insert({
+          thread_id: threadId,
+          ui_id: msgId || Math.random().toString(36).slice(2),
+          role: "assistant",
+          parts: {
+            id: msgId,
+            role: "assistant",
+            parts,
+            metadata: { sources },
+          } as never,
+        });
+      } catch {}
+    }
+  };
 
   const context = (hits ?? [])
     .map((h, i) => `[${i + 1}] ${h.document_name}${h.page ? ` – page ${h.page}` : ""}\n${h.content}`)
@@ -245,11 +326,10 @@ ${context || "(no relevant excerpts were found)"}`;
   // 3. Model Streaming with Auto-Fallback across active Gemini models
   if (geminiKey) {
     const geminiModels = [
-      getEnv("GEMINI_MODEL") || "gemini-3.7-flash",
-      "gemini-3.5-flash",
-      "gemini-3.5-flash-lite",
-      "gemini-3.1-flash-lite",
-      "gemini-flash-lite-latest",
+      getEnv("GEMINI_MODEL") || "gemini-3.8-flash",
+      "gemini-3-flash-preview",
+      "gemini-3.1-flash-lite-preview",
+      "gemini-flash-latest",
     ];
 
     const provider = createOpenAI({
@@ -281,19 +361,10 @@ ${context || "(no relevant excerpts were found)"}`;
                 .join("")
                 .trim();
             }
-            const parts = [{ type: "text", text: answerText || "Answer generated." }];
-            const { error } = await supabase.from("messages").insert({
-              thread_id: threadId,
-              ui_id: responseMessage.id || Math.random().toString(36).slice(2),
-              role: "assistant",
-              parts: {
-                id: responseMessage.id,
-                role: "assistant",
-                parts,
-                metadata: { sources },
-              } as never,
-            });
-            if (error) console.error("save assistant message failed", error);
+            await saveAssistantMessage(
+              responseMessage.id || Math.random().toString(36).slice(2),
+              answerText || "Answer generated.",
+            );
           },
         });
       } catch (err) {
@@ -325,18 +396,10 @@ ${context || "(no relevant excerpts were found)"}`;
           try {
             answerText = (await result.text).trim();
           } catch {}
-          const parts = [{ type: "text", text: answerText || "Answer generated." }];
-          await supabase.from("messages").insert({
-            thread_id: threadId,
-            ui_id: responseMessage.id || Math.random().toString(36).slice(2),
-            role: "assistant",
-            parts: {
-              id: responseMessage.id,
-              role: "assistant",
-              parts,
-              metadata: { sources },
-            } as never,
-          });
+          await saveAssistantMessage(
+            responseMessage.id || Math.random().toString(36).slice(2),
+            answerText || "Answer generated.",
+          );
         },
       });
     } catch (err) {
@@ -370,18 +433,10 @@ ${context || "(no relevant excerpts were found)"}`;
           try {
             answerText = (await result.text).trim();
           } catch {}
-          const parts = [{ type: "text", text: answerText || "Answer generated." }];
-          await supabase.from("messages").insert({
-            thread_id: threadId,
-            ui_id: responseMessage.id || Math.random().toString(36).slice(2),
-            role: "assistant",
-            parts: {
-              id: responseMessage.id,
-              role: "assistant",
-              parts,
-              metadata: { sources },
-            } as never,
-          });
+          await saveAssistantMessage(
+            responseMessage.id || Math.random().toString(36).slice(2),
+            answerText || "Answer generated.",
+          );
         },
       });
       return withLovableAiGatewayRunIdHeader(response, runIdFetch);
@@ -428,18 +483,10 @@ ${context || "(no relevant excerpts were found)"}`;
       writer.write({ type: "finish" });
     },
     onFinish: async ({ responseMessage }) => {
-      const parts = [{ type: "text", text: answerContent }];
-      await supabase.from("messages").insert({
-        thread_id: threadId,
-        ui_id: responseMessage.id || Math.random().toString(36).slice(2),
-        role: "assistant",
-        parts: {
-          id: responseMessage.id,
-          role: "assistant",
-          parts,
-          metadata: { sources },
-        } as never,
-      });
+      await saveAssistantMessage(
+        responseMessage.id || Math.random().toString(36).slice(2),
+        answerContent,
+      );
     },
   });
 

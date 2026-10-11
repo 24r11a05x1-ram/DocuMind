@@ -1,0 +1,218 @@
+{
+  "users": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "email": "admin@documind.ai",
+      "password": "DocuMind2026!Key",
+      "created_at": "2026-10-01T00:00:00Z"
+    }
+  ],
+  "threads": [
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "Welcome to DocuMind",
+      "created_at": "2026-10-11T07:32:15.021Z",
+      "updated_at": "2026-10-11T07:32:15.021Z"
+    }
+  ],
+  "documents": [],
+  "chunks": [],
+  "messages": [
+    {
+      "id": "658c5ef9-a654-41f1-b39a-52ce201e9467",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-1",
+      "role": "user",
+      "parts": {
+        "id": "msg-1",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Hello, what can you do?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:32:38.951Z"
+    },
+    {
+      "id": "ce9ad941-9543-407f-9d5a-9667cfd5b336",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "hxa5odhf2cd",
+      "role": "assistant",
+      "parts": {
+        "id": "hxa5odhf2cd",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Hello! I am **DocuMind**, your intelligent document assistant. \n\nHere is what I can do for you:\n\n* **Document Question & Answering**: I can read and analyze your uploaded documents to provide accurate, factual answers to your questions.\n* **Multilingual Capabilities**: You can ask questions in any language (such as Telugu, Hindi, Spanish, or English), and I will respond in that same language—even if your source documents are written in English.\n* **Precise Citations**: I cite the exact parts of your documents (e.g., `[1]`, `[2]`) that support each answer so you can easily verify the facts.\n* **Summarization & Key Insights**: I can summarize long reports, extract key points, compare sections, or explain complex concepts simply.\n\nFeel free to ask a question or upload a document to get started!"
+          }
+        ],
+        "metadata": {
+          "sources": []
+        }
+      },
+      "created_at": "2026-10-11T07:33:00.742Z"
+    },
+    {
+      "id": "86d04d1a-ab1f-4b86-87d9-536553c79e54",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-2",
+      "role": "user",
+      "parts": {
+        "id": "msg-2",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "ఈ అసిస్టెంట్ ఏమి చేయగలదు?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:33:29.770Z"
+    },
+    {
+      "id": "71ab7feb-2fa7-4827-84bd-c564bf2a5f29",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "o1oy4eq732",
+      "role": "assistant",
+      "parts": {
+        "id": "o1oy4eq732",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Answer generated."
+          }
+        ],
+        "metadata": {
+          "sources": []
+        }
+      },
+      "created_at": "2026-10-11T07:34:37.959Z"
+    },
+    {
+      "id": "72ba7021-873e-4352-84a3-7dfb02fc1595",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-tel",
+      "role": "user",
+      "parts": {
+        "id": "msg-tel",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "ఈ అసిస్టెంట్ ఏమి చేయగలదు?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:34:48.962Z"
+    },
+    {
+      "id": "8109c964-0f12-4824-98c7-290a1d1d3eb5",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "0eawhrq7rptm",
+      "role": "assistant",
+      "parts": {
+        "id": "0eawhrq7rptm",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "నమస్కారం! నేను **DocuMind** – మీ పత్రాల (డాక్యుమెంట్ల) ఆధారంగా పనిచేసే తెలివైన బహుభాషా AI సహాయకుడిని. \n\nనేను మీకు ఈ క్రింది విధాలుగా సహాయపడగలను:\n\n* **పత్రాల నుండి సమాధానాలు:** మీరు అప్‌లోడ్ చేసిన పత్రాల (PDFలు, నివేదికలు, టెక్స్ట్ ఫైళ్లు"
+          }
+        ],
+        "metadata": {
+          "sources": []
+        }
+      },
+      "created_at": "2026-10-11T07:36:01.448Z"
+    },
+    {
+      "id": "c3e8443c-fe85-4635-9da1-b94188cd665b",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-tel-2",
+      "role": "user",
+      "parts": {
+        "id": "msg-tel-2",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "నమస్కారం! మీరు ఎలా సహాయపడగలరు?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:36:41.493Z"
+    },
+    {
+      "id": "b0eaf8e6-826a-466a-a921-71b594a66116",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "cpi9z08yqu7",
+      "role": "assistant",
+      "parts": {
+        "id": "cpi9z08yqu7",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Answer generated."
+          }
+        ],
+        "metadata": {
+          "sources": []
+        }
+      },
+      "created_at": "2026-10-11T07:36:46.728Z"
+    },
+    {
+      "id": "b4f91fad-3729-4882-bf79-0b76e23064fd",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-tel-3",
+      "role": "user",
+      "parts": {
+        "id": "msg-tel-3",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "నమస్కారం! మీరు ఎలా సహాయపడగలరు?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:38:45.982Z"
+    },
+    {
+      "id": "ca95f501-f9f2-4187-9253-08b1370bf8fa",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "2iz6bp5zy1c",
+      "role": "assistant",
+      "parts": {
+        "id": "2iz6bp5zy1c",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "నమస్కారం! నేను **DocuMind** – మీ పత్రాల (డాక్యుమెంట్ల) ఆధారిత సహాయకుడిని. \n\nనేను మీకు ఈ క్రింది విధాలుగా సహాయపడగలను:\n\n* **ప్ర"
+          }
+        ],
+        "metadata": {
+          "sources": []
+        }
+      },
+      "created_at": "2026-10-11T07:39:14.204Z"
+    }
+  ]
+}

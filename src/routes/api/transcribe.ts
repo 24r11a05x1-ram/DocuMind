@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createClient } from "@supabase/supabase-js";
+import { localDb } from "@/lib/local-db";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -62,11 +63,25 @@ export const Route = createFileRoute("/api/transcribe")({
 
         const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
         if (!token) return err(401, "Please sign in");
-        const sb = createClient(url, anon, {
-          auth: { persistSession: false, autoRefreshToken: false },
-        });
-        const { data: u } = await sb.auth.getUser(token);
-        if (!u.user) return err(401, "Please sign in");
+        
+        let authenticated = false;
+        const isExpiredDomain = !url || url.includes("yweefvfmutrutogxtyis") || url.includes("example") || url.includes("placeholder");
+        if (isExpiredDomain || token.startsWith("local-token-")) {
+          const u = localDb.verifyToken(token);
+          if (u) authenticated = true;
+        } else {
+          try {
+            const sb = createClient(url, anon, {
+              auth: { persistSession: false, autoRefreshToken: false },
+            });
+            const { data: u } = await sb.auth.getUser(token);
+            if (u?.user) authenticated = true;
+          } catch {
+            const u = localDb.verifyToken(token);
+            if (u) authenticated = true;
+          }
+        }
+        if (!authenticated) return err(401, "Please sign in");
 
         const len = Number(request.headers.get("content-length") ?? 0);
         if (len > MAX + 64 * 1024) return err(413, "Recording is too long");
