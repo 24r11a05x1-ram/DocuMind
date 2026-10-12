@@ -9,6 +9,13 @@
   ],
   "threads": [
     {
+      "id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "what is surename of ramcharan",
+      "created_at": "2026-10-12T02:09:31.107Z",
+      "updated_at": "2026-10-12T02:09:50.167Z"
+    },
+    {
       "id": "11111111-1111-1111-1111-111111111111",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "title": "Welcome to DocuMind",
@@ -16,8 +23,46 @@
       "updated_at": "2026-10-11T07:32:15.021Z"
     }
   ],
-  "documents": [],
-  "chunks": [],
+  "documents": [
+    {
+      "id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "name": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+      "size": 245365,
+      "chunk_count": 4,
+      "created_at": "2026-10-11T07:40:34.450Z"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "f71589d3-e58f-49bc-9acf-529d1311fae4",
+      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M A R Y Systematic and quick-learning Computer Science student with hands-on experience in full-stack development, machine learning, and IoT-based applications. Skilled at building data-driven, user-focused solutions and adapting rapidly to new technologies to solve real-world problems. T E C H N I C A L S KI L L S Core: Java, Python, C, JavaScript, SQL Frameworks & Tools: React.js, Node.js, Express.js, Git, GitHub, VS Code, npm Platforms & Databases: MongoDB Practices: Problem Solving, Teamwork, Communication, Time Management, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 –"
+    },
+    {
+      "id": "015aa9a5-e5c7-4b4f-a24f-a74a95c2bbfb",
+      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practical data analysis and project-based learning. • Applied data cleaning, exploratory data analysis, visualization, and customer segmentation techniques to real-world datasets. • Built and documented data analytics projects using Python, pandas, NumPy, Matplotlib, and scikit-learn. P R O J EC T S SmartCrop Monitor HTML, CSS, JavaScript, Python, Machine Learning, IoT Devices • Developed a smart agriculture application to monitor crop health and support farmers with data-driven decision- making. Smart Medication Alert System React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedul"
+    },
+    {
+      "id": "a915183b-1b9d-4a1f-82bf-1cf74cfe33ae",
+      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system. Plagiarism Detection System HTML, CSS, JavaScript, Python, Flask, NLP • Developed a plagiarism detection system using NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization. Construction Management Platform HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB • Developed a web-based construction management platform for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication. E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology"
+    },
+    {
+      "id": "17ea9812-26d6-4e5a-b55a-b8655dd05dda",
+      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM SkillsBuild, Feb 2026. • NASSCOM FutureSkills Prime — Digital Application Fundamentals (STEM). • Data Analytics Internship — Oasis Infobyte. A C H I EV EM E NT S • HackHazards 2026 — Participant, June 2026. A D D I T I O N A L Languages: English, Telugu, Hindi"
+    }
+  ],
   "messages": [
     {
       "id": "658c5ef9-a654-41f1-b39a-52ce201e9467",
@@ -213,6 +258,406 @@
         }
       },
       "created_at": "2026-10-11T07:39:14.204Z"
+    },
+    {
+      "id": "5f0469cc-cec0-496d-9b77-7cfe8429e673",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "wZEFh5dMs54vuhxD",
+      "role": "user",
+      "parts": {
+        "id": "wZEFh5dMs54vuhxD",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what projects does the pdf holds?"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:40:51.786Z"
+    },
+    {
+      "id": "62b4de34-15dc-4f36-852a-cf332b041714",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "rfzsp55o89k",
+      "role": "assistant",
+      "parts": {
+        "id": "rfzsp55o89k",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the document, here are the projects listed in the resume:\n\n1. **SmartCrop Monitor**\n   * **Technologies:** HTML, CSS, JavaScript, Python, Machine Learning, IoT Devices [1].\n   * **Description:** A smart agriculture application developed to monitor crop health and support farmers with data-driven decision-making [1].\n\n2. **Smart Medication Alert System**\n   * **Technologies:** React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript [1], [2].\n   * **Description:** A full-stack web application designed to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system [1], [2].\n\n3. **Plagiarism Detection System**\n   * **Technologies:** HTML, CSS, JavaScript, Python, Flask, NLP [2].\n   * **Description:** A plagiarism detection system that utilizes NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization [2].\n\n4. **Construction Management Platform**\n   * **Technologies:** HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB [2].\n   * **Description:** A web-based platform built for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-11T07:40:56.070Z"
+    },
+    {
+      "id": "254ae1c5-5c2e-4bc1-9bd9-60a0735991ed",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "7cRLVKUGe3Wm6dwX",
+      "role": "user",
+      "parts": {
+        "id": "7cRLVKUGe3Wm6dwX",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "among these listed projects which one is the best"
+          }
+        ]
+      },
+      "created_at": "2026-10-11T07:41:38.107Z"
+    },
+    {
+      "id": "edae0cad-e7c8-4051-9016-562c5d011c4d",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "g94hzjliued",
+      "role": "assistant",
+      "parts": {
+        "id": "g94hzjliued",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "The document does not explicitly rank or state which project is the \"best\" [1], [2]. Each project highlights different technical strengths depending on the domain:\n\n* **For Full-Stack Development:** The **Smart Medication Alert System** stands out because it utilizes a modern full-stack architecture (React.js, TypeScript, Node.js, Express.js, MongoDB) and incorporates comprehensive features such as secure authentication, prescription management, and a nurse alert system [1], [2].\n* **For Machine Learning & IoT:** The **SmartCrop Monitor** is notable for integrating hardware (IoT devices) with Machine Learning to solve real-world agricultural problems through data-driven decisions [1].\n* **For AI / Natural Language Processing:** The **Plagiarism Detection System** demonstrates specialized skills in NLP, similarity analysis, text preprocessing, and Flask web deployment [2].\n* **For Enterprise / Project Management Systems:** The **Construction Management Platform** showcases complex business logic, including resource allocation, task management, collaboration, and progress tracking using the MERN stack [2].\n\nWhich project is considered \"best\" depends on the specific domain or role being targeted (Full-Stack, ML/IoT, or NLP)."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-11T07:41:51.723Z"
+    },
+    {
+      "id": "b16fd10e-3d4f-43f5-ad0f-601b25ecea62",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-test",
+      "role": "user",
+      "parts": {
+        "id": "msg-test",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "DocuMind capabilities test"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:08:43.380Z"
+    },
+    {
+      "id": "56c2419e-102e-4633-8587-ece1b46df4fd",
+      "thread_id": "11111111-1111-1111-1111-111111111111",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "bvdp4x9p0e7",
+      "role": "assistant",
+      "parts": {
+        "id": "bvdp4x9p0e7",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Answer generated."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:08:47.813Z"
+    },
+    {
+      "id": "ea20a336-34d0-4f27-9fa5-ff0698c329d5",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "rVfMMUbgogLZ0sAn",
+      "role": "user",
+      "parts": {
+        "id": "rVfMMUbgogLZ0sAn",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:09:50.163Z"
+    },
+    {
+      "id": "5a73ef8a-eab9-4c6a-8e4e-d0581b0bd8b2",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "upkqiubayl",
+      "role": "assistant",
+      "parts": {
+        "id": "upkqiubayl",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded resume (**Ramcharan_Sangamoni_Resume_Exact_Template.pdf**), the surname of Ramcharan is **Sangamoni** [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:11:19.142Z"
+    },
+    {
+      "id": "25f04b3c-f984-4cc4-943f-66638473e4dd",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "BBiQSckVSrYpIyOb",
+      "role": "user",
+      "parts": {
+        "id": "BBiQSckVSrYpIyOb",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what are the projects mentioned therre"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:11:37.255Z"
+    },
+    {
+      "id": "4cbfd989-65d9-4ff1-92a8-6e6a51d2e3fa",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "g97krld03to",
+      "role": "assistant",
+      "parts": {
+        "id": "g97krld03to",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the resume, the following projects are mentioned:\n\n1. **SmartCrop Monitor** [1]\n   * **Technologies:** HTML, CSS, JavaScript, Python, Machine Learning, IoT Devices [1]\n   * **Description:** A smart agriculture application developed to monitor crop health and support farmers with data-driven decision-making [1].\n\n2. **Smart Medication Alert System** [1], [2]\n   * **Technologies:** React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript [1], [2]\n   * **Description:** A full-stack web application designed to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system [1], [2].\n\n3. **Plagiarism Detection System** [2]\n   * **Technologies:** HTML, CSS, JavaScript, Python, Flask, NLP [2]\n   * **Description:** A plagiarism detection system utilizing NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization [2].\n\n4. **Construction Management Platform** [2]\n   * **Technologies:** HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB [2]\n   * **Description:** A web-based construction management platform for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:16:46.585Z"
+    },
+    {
+      "id": "d28174aa-ef97-43c6-9fb6-113a5e6bc2ce",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "test-q1",
+      "role": "user",
+      "parts": {
+        "id": "test-q1",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what are the projects mentioned therre"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:19:08.387Z"
+    },
+    {
+      "id": "e758f40c-6de0-47be-8e08-5e01e28ebf8b",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "N4lbSF46MaOz42NU",
+      "role": "assistant",
+      "parts": {
+        "id": "N4lbSF46MaOz42NU",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, here are the projects mentioned:\n\n* **SmartCrop Monitor**: A smart agriculture application developed using HTML, CSS, JavaScript, Python, Machine Learning, and IoT Devices to monitor crop health and support farmers with data-driven decision-making [1].\n* **Smart Medication Alert System**: A full-stack web application built with React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system [1], [2].\n* **Plagiarism Detection System**: A system developed using HTML, CSS, JavaScript, Python, Flask, and NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization [2].\n* **Construction Management Platform**: A web-based platform built with HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:19:10.199Z"
+    },
+    {
+      "id": "a6ecaa4f-f7e3-474f-aeb7-22437c4579e5",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "test-tel-proj",
+      "role": "user",
+      "parts": {
+        "id": "test-tel-proj",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రామ్‌చరణ్ రెజ్యూమెలో ఉన్న ప్రాజెక్టులు ఏమిటి?"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:19:34.032Z"
+    },
+    {
+      "id": "4af8fde1-cc01-4874-b765-36cf4c0dfa78",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "FoMGB0GrUC0lBlis",
+      "role": "assistant",
+      "parts": {
+        "id": "FoMGB0GrUC0lBlis",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రామ్‌చరణ్ రెజ్యూమెలో పేర్కొన్న ప్రాజెక్టులు ఇక్కడ ఉన్నాయి:\n\n* **స్మార్ట్‌క్రాప్ మానిటర్ (SmartCrop Monitor):** \n  * **ఉపయోగించిన టెక్నాలజీలు:** HTML, CSS, JavaScript, Python, Machine Learning, IoT Devices [2].\n  * **వివరాలు:** రైతులు పంట ఆరోగ్యాన్ని పర్యవేక్షించడానికి మరియు డేటా ఆధారిత నిర్ణయాలు తీసుకోవడానికి సహాయపడే ఒక స్మార్ట్ వ్యవసాయ అప్లికేషన్‌ను అభివృద్ధి చేశారు [2].\n\n* **స్మార్ట్ మెడికేషన్ అలర్ట్ సిస్టమ్ (Smart Medication Alert System):** \n  * **ఉపయోగించిన టెక్నాలజీలు:** React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript [2].\n  * **వివరాలు:** వినియోగదారులు తమ మందుల షెడ్యూల్‌ను నిర్వహించుకోవడానికి సహాయపడే పూర్తి-స్థాయి (full-stack) వెబ్ అప్లికేషన్‌ను అభివృద్ధి చేశారు [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:19:37.292Z"
     }
   ]
 }

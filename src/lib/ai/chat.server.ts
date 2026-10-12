@@ -184,10 +184,9 @@ export async function handleChat(request: Request) {
 
   if (question && isNonEnglish && geminiKey) {
     const modelsToTry = [
-      getEnv("GEMINI_MODEL") || "gemini-3.8-flash",
-      "gemini-3-flash-preview",
-      "gemini-3.1-flash-lite-preview",
-      "gemini-flash-latest",
+      getEnv("GEMINI_MODEL") || "gemini-3.5-flash-lite",
+      "gemini-3.5-flash",
+      "gemini-3.1-flash-lite",
     ];
 
     for (const model of modelsToTry) {
@@ -323,53 +322,76 @@ CRITICAL INSTRUCTIONS:
 Context Excerpts:
 ${context || "(no relevant excerpts were found)"}`;
 
-  // 3. Model Streaming with Auto-Fallback across active Gemini models
+  // 3. Direct Fast Gemini Model Generation (1-2s response time)
   if (geminiKey) {
     const geminiModels = [
-      getEnv("GEMINI_MODEL") || "gemini-3.8-flash",
-      "gemini-3-flash-preview",
-      "gemini-3.1-flash-lite-preview",
-      "gemini-flash-latest",
+      getEnv("GEMINI_MODEL") || "gemini-3.5-flash-lite",
+      "gemini-3.5-flash",
+      "gemini-3.1-flash-lite",
     ];
 
-    const provider = createOpenAI({
-      baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-      apiKey: geminiKey,
-    });
-
+    let geminiText = "";
     for (const modelName of geminiModels) {
       try {
-        const result = streamText({
-          model: provider.chat(modelName),
-          system,
-          messages: await convertToModelMessages(messages),
-          abortSignal: request.signal,
-        });
+        const fullPrompt = `${system}\n\nUser Question: ${question}\n\nAnswer accurately and concisely with inline source citations [1], [2]:`;
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${geminiKey}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: fullPrompt }] }],
+              generationConfig: {
+                maxOutputTokens: 2048,
+                temperature: 0.2,
+              },
+            }),
+            signal: AbortSignal.timeout(8000),
+          }
+        );
 
-        return result.toUIMessageStreamResponse({
-          originalMessages: messages,
-          sendReasoning: false,
-          messageMetadata: ({ part }) => (part.type === "start" ? { sources } : undefined),
-          onFinish: async ({ responseMessage }) => {
-            let answerText = "";
-            try {
-              answerText = (await result.text).trim();
-            } catch {}
-            if (!answerText && Array.isArray(responseMessage.parts)) {
-              answerText = responseMessage.parts
-                .map((p: any) => (p && p.type === "text" ? p.text : ""))
-                .join("")
-                .trim();
-            }
-            await saveAssistantMessage(
-              responseMessage.id || Math.random().toString(36).slice(2),
-              answerText || "Answer generated.",
-            );
-          },
-        });
+        if (res.ok) {
+          const data = await res.json();
+          const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+          if (candidate) {
+            geminiText = candidate;
+            break;
+          }
+        }
       } catch (err) {
-        console.warn(`Gemini model ${modelName} failed, trying next fallback:`, err);
+        console.warn(`Gemini model ${modelName} failed or timed out:`, err);
       }
+    }
+
+    if (geminiText) {
+      const uiStream = createUIMessageStream({
+        execute: async ({ writer }) => {
+          writer.write({
+            type: "start",
+            messageMetadata: { sources },
+          });
+          const partId = "text-part-0";
+          writer.write({ type: "text-start", partId });
+
+          const words = geminiText.split(" ");
+          for (let i = 0; i < words.length; i += 3) {
+            const chunk = words.slice(i, i + 3).join(" ") + (i + 3 < words.length ? " " : "");
+            writer.write({ type: "text-delta", partId, textDelta: chunk });
+            await new Promise((r) => setTimeout(r, 12));
+          }
+
+          writer.write({ type: "text-finish", partId });
+          writer.write({ type: "finish" });
+        },
+        onFinish: async ({ responseMessage }) => {
+          await saveAssistantMessage(
+            responseMessage.id || Math.random().toString(36).slice(2),
+            geminiText,
+          );
+        },
+      });
+
+      return createUIMessageStreamResponse({ stream: uiStream });
     }
   }
 
