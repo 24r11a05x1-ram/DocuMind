@@ -370,17 +370,16 @@ ${context || "(no relevant excerpts were found)"}`;
             type: "start",
             messageMetadata: { sources },
           });
-          const partId = "text-part-0";
-          writer.write({ type: "text-start", partId });
+          writer.write({ type: "text-start", id: "0" });
 
           const words = geminiText.split(" ");
           for (let i = 0; i < words.length; i += 3) {
             const chunk = words.slice(i, i + 3).join(" ") + (i + 3 < words.length ? " " : "");
-            writer.write({ type: "text-delta", partId, textDelta: chunk });
-            await new Promise((r) => setTimeout(r, 12));
+            writer.write({ type: "text-delta", id: "0", delta: chunk });
+            await new Promise((r) => setTimeout(r, 10));
           }
 
-          writer.write({ type: "text-finish", partId });
+          writer.write({ type: "text-end", id: "0" });
           writer.write({ type: "finish" });
         },
         onFinish: async ({ responseMessage }) => {
@@ -491,17 +490,16 @@ ${context || "(no relevant excerpts were found)"}`;
         type: "start",
         messageMetadata: { sources },
       });
-      const partId = "text-part-0";
-      writer.write({ type: "text-start", partId });
+      writer.write({ type: "text-start", id: "0" });
 
       const words = answerContent.split(" ");
       for (let i = 0; i < words.length; i += 3) {
         const chunk = words.slice(i, i + 3).join(" ") + (i + 3 < words.length ? " " : "");
-        writer.write({ type: "text-delta", partId, textDelta: chunk });
-        await new Promise((r) => setTimeout(r, 15));
+        writer.write({ type: "text-delta", id: "0", delta: chunk });
+        await new Promise((r) => setTimeout(r, 12));
       }
 
-      writer.write({ type: "text-finish", partId });
+      writer.write({ type: "text-end", id: "0" });
       writer.write({ type: "finish" });
     },
     onFinish: async ({ responseMessage }) => {

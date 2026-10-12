@@ -658,6 +658,180 @@
         }
       },
       "created_at": "2026-10-12T02:19:37.292Z"
+    },
+    {
+      "id": "ad25de61-60c7-42a4-a00b-002ca01b6152",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "f39LsMAr34IsUc8h",
+      "role": "user",
+      "parts": {
+        "id": "f39LsMAr34IsUc8h",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is phone number of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:21:50.273Z"
+    },
+    {
+      "id": "8fbef7ca-ad42-4093-9910-288c22d4cabb",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "9bnXGYBnusc2CRVO",
+      "role": "assistant",
+      "parts": {
+        "id": "9bnXGYBnusc2CRVO",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "The phone number of Ramcharan Sangamoni is **+91 6305206316** [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:21:52.452Z"
+    },
+    {
+      "id": "405c388d-5dab-459d-bdfc-578f5cdadd38",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "verify-q",
+      "role": "user",
+      "parts": {
+        "id": "verify-q",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:24:42.020Z"
+    },
+    {
+      "id": "fef4bd7b-66d1-4dac-a296-852010f9f17f",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "66AAujsKyukhcsuY",
+      "role": "assistant",
+      "parts": {
+        "id": "66AAujsKyukhcsuY",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Ramcharan's surname is **Sangamoni** [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:24:43.424Z"
+    },
+    {
+      "id": "e41e1a1e-e51e-4acf-b9d0-eeb631457223",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "verify-tel",
+      "role": "user",
+      "parts": {
+        "id": "verify-tel",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రామ్‌చరణ్ ఇంటి పేరు ఏమిటి?"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:24:55.099Z"
+    },
+    {
+      "id": "6cfe685e-3c57-4fe6-8639-bb843a199c4c",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "FgPZRM20Vxf9cFyf",
+      "role": "assistant",
+      "parts": {
+        "id": "FgPZRM20Vxf9cFyf",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రామ్‌చరణ్ ఇంటి పేరు **సంగమోని (Sangamoni)** [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:24:56.848Z"
     }
   ]
 }
