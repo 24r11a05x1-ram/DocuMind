@@ -111,6 +111,22 @@ export const Route = createFileRoute("/api/db")({
             return json({ data: msg });
           }
 
+          // 8. Visual Studio Data
+          if (action === "studio_data") {
+            const users = localDb.getUsers().map((u) => ({ id: u.id, email: u.email, created_at: u.created_at }));
+            const docs = localDb.getDocuments();
+            const threads = localDb.getThreads();
+            const chunks = localDb.getChunks(100);
+            return json({
+              data: {
+                users,
+                documents: docs,
+                threads,
+                chunks,
+              },
+            });
+          }
+
           return json({ error: `Unknown action: ${action}` }, 400);
         } catch (err) {
           console.error("API /api/db error:", err);

@@ -2,7 +2,7 @@ import { createFileRoute, Link, Outlet, useNavigate, useParams } from "@tanstack
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { CloudUpload, FileText, Loader2, LogOut, MessageSquarePlus, Trash2, X, CheckCircle2 } from "lucide-react";
+import { CloudUpload, FileText, Loader2, LogOut, MessageSquarePlus, Trash2, X, CheckCircle2, Database } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useSession } from "@/hooks/use-session";
 import { ingestFile } from "@/lib/ingest";
@@ -196,6 +196,16 @@ function Sidebar() {
             {docs.data?.length === 0 && <li className="py-2 text-xs text-sidebar-foreground/60">{t("noDocs")}</li>}
           </ul>
         </section>
+      </div>
+
+      <div className="border-t border-sidebar-border p-3">
+        <Link
+          to="/db"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 py-2.5 text-xs font-semibold text-emerald-400 hover:bg-emerald-500/20 transition shadow-sm"
+        >
+          <Database className="size-3.5" />
+          <span>Supabase Backend Studio</span>
+        </Link>
       </div>
     </aside>
   );

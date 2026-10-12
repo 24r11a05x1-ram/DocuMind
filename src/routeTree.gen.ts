@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ChatRouteImport } from './routes/chat'
+import { Route as DbRouteImport } from './routes/db'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as ApiDbRouteImport } from './routes/api/db'
 import { Route as ApiTranscribeRouteImport } from './routes/api/transcribe'
@@ -31,6 +32,11 @@ const AuthRoute = AuthRouteImport.update({
 const ChatRoute = ChatRouteImport.update({
   id: '/chat',
   path: '/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DbRoute = DbRouteImport.update({
+  id: '/db',
+  path: '/db',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiChatRoute = ApiChatRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
+  '/db': typeof DbRoute
   '/api/chat': typeof ApiChatRoute
   '/api/db': typeof ApiDbRoute
   '/api/transcribe': typeof ApiTranscribeRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/db': typeof DbRoute
   '/api/chat': typeof ApiChatRoute
   '/api/db': typeof ApiDbRoute
   '/api/transcribe': typeof ApiTranscribeRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
+  '/db': typeof DbRoute
   '/api/chat': typeof ApiChatRoute
   '/api/db': typeof ApiDbRoute
   '/api/transcribe': typeof ApiTranscribeRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/chat'
+    | '/db'
     | '/api/chat'
     | '/api/db'
     | '/api/transcribe'
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/db'
     | '/api/chat'
     | '/api/db'
     | '/api/transcribe'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/chat'
+    | '/db'
     | '/api/chat'
     | '/api/db'
     | '/api/transcribe'
@@ -125,6 +137,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthRoute: typeof AuthRoute
   ChatRoute: typeof ChatRouteWithChildren
+  DbRoute: typeof DbRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiDbRoute: typeof ApiDbRoute
   ApiTranscribeRoute: typeof ApiTranscribeRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       path: '/chat'
       fullPath: '/chat'
       preLoaderRoute: typeof ChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/db': {
+      id: '/db'
+      path: '/db'
+      fullPath: '/db'
+      preLoaderRoute: typeof DbRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/chat': {
@@ -207,6 +227,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRoute,
   ChatRoute: ChatRouteWithChildren,
+  DbRoute: DbRoute,
   ApiChatRoute: ApiChatRoute,
   ApiDbRoute: ApiDbRoute,
   ApiTranscribeRoute: ApiTranscribeRoute,
