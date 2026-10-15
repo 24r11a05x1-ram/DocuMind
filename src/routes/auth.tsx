@@ -56,6 +56,24 @@ function AuthPage() {
   useEffect(() => {
     if (session) {
       nav({ to: "/chat", replace: true });
+      return;
+    }
+
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      const search = window.location.search;
+      const hashParams = new URLSearchParams(hash.replace(/^#/, ""));
+      const searchParams = new URLSearchParams(search);
+
+      const errorMsg =
+        searchParams.get("error_description") ||
+        hashParams.get("error_description") ||
+        searchParams.get("error") ||
+        hashParams.get("error");
+
+      if (errorMsg) {
+        toast.error(`Authentication notice: ${decodeURIComponent(errorMsg)}`, { duration: 6000 });
+      }
     }
   }, [session, nav]);
 
@@ -84,10 +102,11 @@ function AuthPage() {
           nav({ to: "/chat", replace: true });
         }
       } else {
+        const origin = window.location.origin.replace(/\/$/, "");
         const { data, error } = await supabase.auth.signUp({
           email: email.trim(),
           password: password.trim(),
-          options: { emailRedirectTo: `${window.location.origin}/chat` },
+          options: { emailRedirectTo: `${origin}/chat` },
         });
         if (error) {
           toast.error(error.message || "Failed to create account.");
@@ -108,10 +127,13 @@ function AuthPage() {
   async function handleGoogleLogin() {
     setBusy(true);
     try {
+      const origin = typeof window !== "undefined" ? window.location.origin.replace(/\/$/, "") : "";
+      const redirectUrl = `${origin}/chat`;
+
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/chat`,
+          redirectTo: redirectUrl,
           queryParams: {
             access_type: "offline",
             prompt: "consent",

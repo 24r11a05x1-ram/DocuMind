@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { FileText, Network, Database, Search, Brain, Quote, Languages, Mic } from "lucide-react";
 import { useI18n, LanguageSelect } from "@/lib/i18n";
 import logo from "@/assets/logo.png";
@@ -33,6 +34,13 @@ const steps = [
 function Landing() {
   const { t } = useI18n();
   const { session } = useSession();
+  const nav = useNavigate();
+
+  useEffect(() => {
+    if (session) {
+      nav({ to: "/chat", replace: true });
+    }
+  }, [session, nav]);
   return (
     <main className="min-h-screen">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">

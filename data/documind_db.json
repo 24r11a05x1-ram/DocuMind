@@ -3340,6 +3340,206 @@
         }
       },
       "created_at": "2026-10-15T14:22:13.163Z"
+    },
+    {
+      "id": "1ae4a940-46d6-4eae-a745-12f6d8d1a8b2",
+      "thread_id": "cdf21ff7-ce4a-4380-87fa-c2a51e002086",
+      "user_id": "ff7b51be-226f-4b05-8310-ec0a2dbd54c6",
+      "ui_id": "0udEZRD3oIk0G0S0",
+      "role": "user",
+      "parts": {
+        "id": "0udEZRD3oIk0G0S0",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give about Ram Charan"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:25:42.317Z"
+    },
+    {
+      "id": "1952b715-d829-4587-8222-1b11b2c25396",
+      "thread_id": "cdf21ff7-ce4a-4380-87fa-c2a51e002086",
+      "user_id": "ff7b51be-226f-4b05-8310-ec0a2dbd54c6",
+      "ui_id": "4bU9nO741Hz8lt10",
+      "role": "assistant",
+      "parts": {
+        "id": "4bU9nO741Hz8lt10",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document, here is the information about **S. Ramcharan**:\n\n* **Identification**: S. Ramcharan (ID: 24R11A05X1) is the author of the internship report [7].\n* **Internship Details**: \n  * Completed a **Data Analytics Internship** at **Oasis Infobyte** [1], [2], [7].\n  * The internship was carried out from **05-05-2026 to 15-06-2026** (with training scheduled between 15 May 2026 and 15 June 2026) [1], [4].\n* **Objective & Skills**: \n  * Aimed to gain practical hands-on experience in data analytics, data preprocessing, and data visualization [1], [2].\n  * Worked with tools and technologies such as **Python, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn** [2].\n  * Developed skills in analytical thinking, problem-solving, Python programming, K-Means clustering, correlation analysis, and user sentiment analysis [7], [8].\n* **Projects Completed**:\n  1. **Customer Segmentation Analysis**: Involved data cleaning, exploratory data analysis (EDA), analyzing customer demographics, spending patterns, purchasing behavior, campaign responses, and K-Means clustering [1], [2], [4], [8].\n  2. **McDonald’s Nutrition Data Analysis**: Focused on analyzing nutritional attributes, category-wise patterns, correlations, and identifying healthy menu items [2], [4], [8].\n  3. **Google Play Store Data Analysis**: Analyzed app categories, ratings, reviews, installations, pricing, and user review sentiment [2], [4], [8].\n* **Project Organization**: Organized and maintained the project files, datasets, Jupyter notebooks, and documentation using separate folders and README files on **GitHub** [6]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": ". No. Contents Page No a Acknowledgement i b About Oasis Infobyte ii c Schedule iii d Abstract iv e List of Tables v f List of Figures vi 1. Introduction 1 2. Related work/ Technologies used 3 3. Work done/ Observation/ "
+            },
+            {
+              "n": 2,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "tion works in various technology areas, including web development, software development, cloud and infrastructure, data and analytics, cybersecurity, and other emerging technologies. Oasis Infobyte provides internship pr"
+            },
+            {
+              "n": 3,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "cription 6 Table 3.2 Technologies and Tools Used 7 Table 3.3 Customer Spending Segments 10 Table 3.4 Project Features and Implementation 20 LIST OF FIGURES Fig. No. Title of Figure Page No. Fig 3.1.1 Elbow Method 12 Fig "
+            },
+            {
+              "n": 4,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "gle Play Store Data Analysis. The Customer Segmentation Analysis project involved data cleaning, exploratory data analysis, customer spending analysis, purchase behavior analysis, campaign response analysis, correlation "
+            },
+            {
+              "n": 5,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "– 21 May 2026 Introduction to the internship and data analytics fundamentals. Learned about datasets, data types, Python basics for data analysis, and introduction to Pandas and NumPy. Week 2 22 May – 28 May 2026 Practic"
+            },
+            {
+              "n": 6,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "cal outcomes were produced correctly. Testing and debugging helped improve the reliability and accuracy of the completed projects. It also provided practical experience in identifying errors, correcting data-processing i"
+            },
+            {
+              "n": 7,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "ysis, data visualization, customer behavior analysis, K-Means clustering, correlation analysis, and sentiment analysis. It also helped me develop my analytical thinking, problem-solving, and Python programming skills. I "
+            },
+            {
+              "n": 8,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " also included to provide basic information about the projects, their features, and the technologies used. 3.8 Observations and Duties Performed The internship involved practical data analysis work as well as learning an"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:25:53.244Z"
+    },
+    {
+      "id": "0e3bf578-2a7a-4bec-bdaa-978df316388b",
+      "thread_id": "cdf21ff7-ce4a-4380-87fa-c2a51e002086",
+      "user_id": "ff7b51be-226f-4b05-8310-ec0a2dbd54c6",
+      "ui_id": "fKo8HvRhemeNCQIC",
+      "role": "user",
+      "parts": {
+        "id": "fKo8HvRhemeNCQIC",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give the internship date the Ram Charan completed his internship"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:26:46.149Z"
+    },
+    {
+      "id": "859e05e0-bcd7-4264-a748-cd9890c4428e",
+      "thread_id": "cdf21ff7-ce4a-4380-87fa-c2a51e002086",
+      "user_id": "ff7b51be-226f-4b05-8310-ec0a2dbd54c6",
+      "ui_id": "AY9Pm0naQGSb3ZLl",
+      "role": "assistant",
+      "parts": {
+        "id": "AY9Pm0naQGSb3ZLl",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents:\n\n* **From `S.Ramcharam_intership_report.docx`**: Ram Charan prepared the final internship submission and completed the internship during **Week 5 (12 June – 15 June 2026)**, concluding on **15 June 2026** [1].\n* **From `S.Ramcharan_24R11A05X1.pdf`**: The report summarizes the conclusion and duties performed during the internship, but does not state the specific completion date in the provided excerpts [3], [5]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " income, age, spending, and purchase behavior. Week 5 12 June – 15 June 2026 Performed customer segmentation based on spending levels and categorized customers into Low, Medium, and High Spending groups. Interpreted key "
+            },
+            {
+              "n": 2,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "g charts and visualizations using Matplotlib and Seaborn. Identifying and correcting issues such as missing values, duplicate records, and data-processing errors. Organizing project files, datasets, notebooks, and docume"
+            },
+            {
+              "n": 3,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 35,
+              "snippet": "enting the completed work. Using GitHub to maintain the projects also helped me understand the importance of proper project organization and version management. Overall, the internship was a valuable learning experience "
+            },
+            {
+              "n": 4,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "ay Store Analysis. Each project provided an opportunity to apply data analysis concepts and understand the process of collecting, cleaning, analyzing, visualizing, and interpreting data. The internship helped me strength"
+            },
+            {
+              "n": 5,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 35,
+              "snippet": "24 5. SUMMARY / CONCLUSION This internship involved practical work in data analysis using Python. The work focused on developing three projects: Customer Segmentation, McDonald's Data Analysis, and Google Play Store Anal"
+            },
+            {
+              "n": 6,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": ". The Google Play Store Data Analysis project involved analyzing app categories, ratings, reviews, installations, pricing, and user feedback, including basic sentiment analysis. The internship helped strengthen my practi"
+            },
+            {
+              "n": 7,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 15,
+              "snippet": "4 3. WORK DONE / OBSERVATION / DUTIES PERFORMED During the internship, I worked on three Data Analytics projects as part of the assigned tasks: Customer Segmentation Analysis, McDonald’s Nutrition Data Analysis, and Goog"
+            },
+            {
+              "n": 8,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "k included loading and inspecting datasets, data cleaning and preprocessing, exploratory data analysis, data visualization, statistical and correlation analysis, customer segmentation using K-Means clustering, nutritiona"
+            },
+            {
+              "n": 9,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 15,
+              "snippet": "atterns and trends, interpreting analytical results, testing and debugging the analysis, and organizing the completed projects using GitHub. The major work performed during the internship can be divided into the followin"
+            },
+            {
+              "n": 10,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 33,
+              "snippet": "sues such as missing values, duplicate records, and data-processing errors. • Organizing project files, datasets, notebooks, and documentation. • Maintaining the completed projects using GitHub. • Preparing the projects "
+            },
+            {
+              "n": 11,
+              "document": "S.Ramcharan_24R11A05X1.pdf",
+              "page": 6,
+              "snippet": "ii ABOUT OASIS INFOBYTE Oasis Infobyte is a software development organization that provides IT services and internship opportunities for students and aspiring professionals. The organization works in various technology a"
+            },
+            {
+              "n": 12,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "tion works in various technology areas, including web development, software development, cloud and infrastructure, data and analytics, cybersecurity, and other emerging technologies. Oasis Infobyte provides internship pr"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:26:58.234Z"
     }
   ]
 }
