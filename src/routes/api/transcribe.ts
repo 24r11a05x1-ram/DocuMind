@@ -56,16 +56,16 @@ export const Route = createFileRoute("/api/transcribe")({
           getEnv("GOOGLE_API_KEY");
         const lovableKey = getEnv("LOVABLE_API_KEY");
         const openaiKey = getEnv("OPENAI_API_KEY");
-        const url = getEnv("SUPABASE_URL") || "https://yweefvfmutrutogxtyis.supabase.co";
+        const url = getEnv("SUPABASE_URL") || "https://uuyfpqfptizdnmvsstyb.supabase.co";
         const anon =
           getEnv("SUPABASE_PUBLISHABLE_KEY") ||
-          "sb_publishable_JuS6yJGn8w1-PN-Ss5cHhw_ta_3TZLS";
+          "sb_publishable_q8w4-Tj4YJnJvRUZzoJzHQ_9XbKhm84";
 
         const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
         if (!token) return err(401, "Please sign in");
         
         let authenticated = false;
-        const isExpiredDomain = !url || url.includes("yweefvfmutrutogxtyis") || url.includes("example") || url.includes("placeholder");
+        const isExpiredDomain = !url || url.includes("example") || url.includes("placeholder");
         if (isExpiredDomain || token.startsWith("local-token-")) {
           const u = localDb.verifyToken(token);
           if (u) authenticated = true;

@@ -32,6 +32,8 @@ function getEnv(key: string): string | undefined {
         for (const line of content.split("\n")) {
           const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
           if (match) {
+            const key = match[1];
+            if (!key) continue;
             let val = (match[2] || "").trim();
             if (
               (val.startsWith('"') && val.endsWith('"')) ||
@@ -39,7 +41,7 @@ function getEnv(key: string): string | undefined {
             ) {
               val = val.slice(1, -1);
             }
-            envCache[match[1]] = val;
+            envCache[key] = val;
           }
         }
       }
@@ -64,15 +66,14 @@ function textOf(m: UIMessage) {
 }
 
 export async function handleChat(request: Request) {
-  const url = getEnv("SUPABASE_URL") || "https://yweefvfmutrutogxtyis.supabase.co";
-  const anon = getEnv("SUPABASE_PUBLISHABLE_KEY") || "sb_publishable_JuS6yJGn8w1-PN-Ss5cHhw_ta_3TZLS";
+  const url = getEnv("SUPABASE_URL") || "https://uuyfpqfptizdnmvsstyb.supabase.co";
+  const anon = getEnv("SUPABASE_PUBLISHABLE_KEY") || "sb_publishable_q8w4-Tj4YJnJvRUZzoJzHQ_9XbKhm84";
 
   const token = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "");
   if (!token) return json(401, "Please sign in");
 
   const isExpiredDomain =
     !url ||
-    url.includes("yweefvfmutrutogxtyis") ||
     url.includes("example") ||
     url.includes("placeholder");
 
@@ -346,7 +347,7 @@ ${context || "(no relevant excerpts were found)"}`;
                 temperature: 0.2,
               },
             }),
-            signal: AbortSignal.timeout(8000),
+            signal: AbortSignal.timeout(20000),
           }
         );
 

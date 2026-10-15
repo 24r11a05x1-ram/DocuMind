@@ -32,18 +32,17 @@ function createSupabaseClient() {
     (typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env['VITE_SUPABASE_URL'] : undefined) ||
     process.env['SUPABASE_URL'] ||
     process.env['VITE_SUPABASE_URL'] ||
-    'https://yweefvfmutrutogxtyis.supabase.co';
+    'https://uuyfpqfptizdnmvsstyb.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY =
     (typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env['VITE_SUPABASE_PUBLISHABLE_KEY'] : undefined) ||
     process.env['SUPABASE_PUBLISHABLE_KEY'] ||
     process.env['VITE_SUPABASE_PUBLISHABLE_KEY'] ||
-    'sb_publishable_JuS6yJGn8w1-PN-Ss5cHhw_ta_3TZLS';
+    'sb_publishable_q8w4-Tj4YJnJvRUZzoJzHQ_9XbKhm84';
 
   // If the host is the expired/unreachable Lovable sandbox or localhost mock requested:
   // Immediately use the universal resilient local client to avoid "Failed to fetch" errors.
   const isExpiredDomain =
     !SUPABASE_URL ||
-    SUPABASE_URL.includes('yweefvfmutrutogxtyis') ||
     SUPABASE_URL.includes('example.supabase.co') ||
     SUPABASE_URL.includes('placeholder');
 

@@ -74,7 +74,11 @@ function AuthPage() {
           password: password.trim(),
         });
         if (error) {
-          toast.error(error.message || "Failed to sign in. Please verify your credentials.");
+          if (error.message.toLowerCase().includes("email not confirmed")) {
+            toast.error("Email not confirmed. In Supabase Dashboard > Auth > Providers > Email, turn OFF 'Confirm email', or check 'Auto Confirm User' in Auth Users.");
+          } else {
+            toast.error(error.message || "Failed to sign in. Please verify your credentials.");
+          }
         } else {
           toast.success("Signed in successfully!");
           nav({ to: "/chat", replace: true });
@@ -108,19 +112,25 @@ function AuthPage() {
         provider: "google",
         options: {
           redirectTo: `${window.location.origin}/chat`,
+          queryParams: {
+            access_type: "offline",
+            prompt: "consent",
+          },
         },
       });
 
       if (error) {
-        toast.info("Google OAuth requires Supabase project keys. Signing in with Instant Demo profile...");
-        await quickDemoLogin();
-      } else {
-        toast.success("Signed in with Google!");
-        nav({ to: "/chat", replace: true });
+        if (error.message.toLowerCase().includes("provider is not enabled")) {
+          toast.error(
+            "Google provider is not enabled yet in Supabase! Please enable it in your Supabase Dashboard > Authentication > Providers > Google.",
+            { duration: 8000 }
+          );
+        } else {
+          toast.error(error.message || "Google sign-in failed.");
+        }
       }
-    } catch {
-      toast.info("Signing in with Instant Demo profile...");
-      await quickDemoLogin();
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Google sign-in failed.");
     } finally {
       setBusy(false);
     }

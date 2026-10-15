@@ -208,9 +208,13 @@ export const localDb = {
   updateThread(id: string, patch: Partial<LocalThread>): LocalThread | undefined {
     const db = ensureDbFile();
     const idx = db.threads.findIndex((t) => t.id === id);
-    if (idx === -1) return undefined;
+    const existing = db.threads[idx];
+    if (!existing) return undefined;
     db.threads[idx] = {
-      ...db.threads[idx],
+      id: existing.id,
+      user_id: existing.user_id,
+      title: existing.title,
+      created_at: existing.created_at,
       ...patch,
       updated_at: patch.updated_at || new Date().toISOString(),
     };

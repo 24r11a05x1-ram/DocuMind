@@ -279,7 +279,7 @@ export function createMockSupabaseClient() {
       async signUp({ email, password }: { email: string; password?: string }) {
         const res = await callDbApi("auth_signup", { email, password });
         if (res.error || !res.data) {
-          return this.signInWithPassword({ email, password });
+          return this.signInWithPassword({ email, password: password || "" });
         }
         const session = res.data.session as MockSession;
         saveLocalSession(session);

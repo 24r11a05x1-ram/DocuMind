@@ -5,9 +5,36 @@
       "email": "admin@documind.ai",
       "password": "DocuMind2026!Key",
       "created_at": "2026-10-01T00:00:00Z"
+    },
+    {
+      "id": "a957489d-ae49-439f-a3b0-83817d24ea31",
+      "email": "test@example.com",
+      "password": "password123",
+      "created_at": "2026-10-15T12:08:57.633Z"
     }
   ],
   "threads": [
+    {
+      "id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "tell me about ramcharan",
+      "created_at": "2026-10-15T12:15:20.043Z",
+      "updated_at": "2026-10-15T12:16:32.026Z"
+    },
+    {
+      "id": "aa7206dd-dea3-48d3-9578-cc963cc044e2",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "Test Question",
+      "created_at": "2026-10-15T12:15:06.627Z",
+      "updated_at": "2026-10-15T12:15:06.627Z"
+    },
+    {
+      "id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "what is surename of ramcharan",
+      "created_at": "2026-10-12T06:48:04.745Z",
+      "updated_at": "2026-10-12T06:48:15.710Z"
+    },
     {
       "id": "e6b09795-403d-4ac6-b775-03c299f739be",
       "user_id": "00000000-0000-0000-0000-000000000001",
@@ -25,39 +52,39 @@
   ],
   "documents": [
     {
-      "id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "id": "abcf4cfc-1692-4853-b776-6b21603dbc10",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "name": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
       "size": 245365,
       "chunk_count": 4,
-      "created_at": "2026-10-11T07:40:34.450Z"
+      "created_at": "2026-10-12T07:58:05.334Z"
     }
   ],
   "chunks": [
     {
-      "id": "f71589d3-e58f-49bc-9acf-529d1311fae4",
-      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "id": "adbddb33-7924-4833-9d10-c9875ccae096",
+      "document_id": "abcf4cfc-1692-4853-b776-6b21603dbc10",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "page": 1,
       "content": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M A R Y Systematic and quick-learning Computer Science student with hands-on experience in full-stack development, machine learning, and IoT-based applications. Skilled at building data-driven, user-focused solutions and adapting rapidly to new technologies to solve real-world problems. T E C H N I C A L S KI L L S Core: Java, Python, C, JavaScript, SQL Frameworks & Tools: React.js, Node.js, Express.js, Git, GitHub, VS Code, npm Platforms & Databases: MongoDB Practices: Problem Solving, Teamwork, Communication, Time Management, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 –"
     },
     {
-      "id": "015aa9a5-e5c7-4b4f-a24f-a74a95c2bbfb",
-      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "id": "bc19a1d0-9b33-4e8e-8f28-ff4488dc22bd",
+      "document_id": "abcf4cfc-1692-4853-b776-6b21603dbc10",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "page": 1,
       "content": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practical data analysis and project-based learning. • Applied data cleaning, exploratory data analysis, visualization, and customer segmentation techniques to real-world datasets. • Built and documented data analytics projects using Python, pandas, NumPy, Matplotlib, and scikit-learn. P R O J EC T S SmartCrop Monitor HTML, CSS, JavaScript, Python, Machine Learning, IoT Devices • Developed a smart agriculture application to monitor crop health and support farmers with data-driven decision- making. Smart Medication Alert System React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedul"
     },
     {
-      "id": "a915183b-1b9d-4a1f-82bf-1cf74cfe33ae",
-      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "id": "d6304732-5808-4989-9f2a-60dc57b864ee",
+      "document_id": "abcf4cfc-1692-4853-b776-6b21603dbc10",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "page": 1,
       "content": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system. Plagiarism Detection System HTML, CSS, JavaScript, Python, Flask, NLP • Developed a plagiarism detection system using NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization. Construction Management Platform HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB • Developed a web-based construction management platform for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication. E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology"
     },
     {
-      "id": "17ea9812-26d6-4e5a-b55a-b8655dd05dda",
-      "document_id": "7ddf4bf0-ab86-44ee-b926-74de754bd021",
+      "id": "718e846e-d947-4a11-933d-c495cc746b69",
+      "document_id": "abcf4cfc-1692-4853-b776-6b21603dbc10",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "page": 1,
       "content": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM SkillsBuild, Feb 2026. • NASSCOM FutureSkills Prime — Digital Application Fundamentals (STEM). • Data Analytics Internship — Oasis Infobyte. A C H I EV EM E NT S • HackHazards 2026 — Participant, June 2026. A D D I T I O N A L Languages: English, Telugu, Hindi"
@@ -832,6 +859,2154 @@
         }
       },
       "created_at": "2026-10-12T02:24:56.848Z"
+    },
+    {
+      "id": "519a9cbf-5a22-422a-bebe-e0e4da4b742c",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "2CLApKigQvxYV1p8",
+      "role": "user",
+      "parts": {
+        "id": "2CLApKigQvxYV1p8",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surnename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:26:02.289Z"
+    },
+    {
+      "id": "421ef5b4-817a-4750-85b7-5312cb7bb231",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "cnx6zOKHmshCBzFd",
+      "role": "assistant",
+      "parts": {
+        "id": "cnx6zOKHmshCBzFd",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Ramcharan's surname is **Sangamoni** [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:26:04.061Z"
+    },
+    {
+      "id": "d41d54c9-c896-4d91-af24-d86247d060d9",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "UKxJJAYNpNf4hgR2",
+      "role": "user",
+      "parts": {
+        "id": "UKxJJAYNpNf4hgR2",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give me the github username"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:26:28.832Z"
+    },
+    {
+      "id": "fe0b251d-af31-4bee-a44e-f68b8e916aad",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "69nKMlEOW5boGyMB",
+      "role": "assistant",
+      "parts": {
+        "id": "69nKMlEOW5boGyMB",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document, Ramcharan Sangamoni's GitHub username is **`24r11a05x1 -ram`** [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:26:30.302Z"
+    },
+    {
+      "id": "0f5dbf24-3393-4b69-ace8-7c4d65f1461e",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "xp2vW8wFyvvrOhUq",
+      "role": "user",
+      "parts": {
+        "id": "xp2vW8wFyvvrOhUq",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "is the resume is complete satisifed"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:26:51.701Z"
+    },
+    {
+      "id": "9de5d7c1-bdb4-4390-82b0-5c4609c5b359",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "HqYlixqzywIKuDoi",
+      "role": "assistant",
+      "parts": {
+        "id": "HqYlixqzywIKuDoi",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, there is no direct statement or metric indicating whether the resume is \"completely satisfied.\" However, the resume outlines a well-rounded profile for Ramcharan Sangamoni, a Computer Science Engineering student (2024–2028) with a CGPA of 8.33/10 [2], [3], [4]. \n\nKey highlights from the resume include:\n* **Professional Experience:** Data Analytics Intern at Oasis Infobyte, Hyderabad, working on practical data analysis, cleaning, visualization, and customer segmentation using Python, pandas, NumPy, and scikit-learn [1], [4].\n* **Projects:** Development of several applications including SmartCrop Monitor, Smart Medication Alert System, Plagiarism Detection System, and a Construction Management Platform [1], [2].\n* **Education & Certifications:** Studying at Geetanjali College of Engineering and Technology [3] with certifications such as Introduction to Generative AI from IBM SkillsBuild and Digital Application Fundamentals from NASSCOM FutureSkills Prime [3].\n* **Technical Skills:** Proficiency in core languages like Java, Python, C, JavaScript, and SQL, along with various web frameworks, databases, and development tools [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:26:54.686Z"
+    },
+    {
+      "id": "ba3b41d0-b44c-4b8b-ad07-f611189555eb",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "Hqc4s3T8IDugnE0s",
+      "role": "user",
+      "parts": {
+        "id": "Hqc4s3T8IDugnE0s",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give the changes to be maade for the better improvement of Resume"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:27:28.111Z"
+    },
+    {
+      "id": "a5969139-a257-4c5b-803c-af5ba0335300",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "p9FHC7I6DNKpfK3W",
+      "role": "assistant",
+      "parts": {
+        "id": "p9FHC7I6DNKpfK3W",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "ప్రprovided డాక్యుమెంట్ (రెజ్యూమ్) సందర్భం ప్రకారం, రామ్‌చరణ్ సంగమోని (Ramcharan Sangamoni) రెజ్యూమ్‌ను మెరుగుపరచడానికి నేరుగా ఎటువంటి సూచనలు ఇవ్వబడలేదు [1], [2], [3], [4]. ఈ రెజ్యూమ్ ఇప్పటికే కింది వివరాలతో చక్కగా రూపొందించబడింది:\n\n* **ప్రొఫెషనల్ సమ్మరీ (Professional Summary):** కంప్యూటర్ సైన్స్ విద్యార్థిగా అతని నైపుణ్యాలు [3].\n* **సాంకేతిక నైపుణ్యాలు (Technical Skills):** జావా, పైథాన్, రియాక్ట్.జెఎస్ (React.js), నోడ్.జెఎస్ (Node.js) మొదలైనవి [3].\n* **ప్రొఫెషనల్ అనుభవం (Professional Experience):** ఒయాసిస్ ఇన్ఫోబైట్ (Oasis Infobyte) వద్ద డేటా అనలిటిక్స్ ఇంటర్న్‌షిప్ [2], [3].\n* **ప్రాజెక్ట్‌లు (Projects):** స్మార్ట్‌క్రాప్ మానిటర్, స్మార్ట్ మెడికేషన్ అలర్ట్ సిస్టమ్, ప్లాగియరిజమ్ డిటెక్షన్ సిస్టమ్, మరియు కన్‌స్ట్రక్షన్ మేనేజ్‌మెంట్ ప్లాట్‌ఫారమ్ [1], [2].\n* **విద్య మరియు సర్టిఫికేషన్లు (Education & Certifications):** గీతాంజలి కాలేజ్ ఆఫ్ ఇంజనీరింగ్ అండ్ టెక్నాలజీలో బి.టెక్ (CGPA: 8.33), ఐబీఎం (IBM) మరియు నాస్కామ్ (NASSCOM) సర్టిఫికేషన్‌లు [1], [4].\n\n**మెరుగుదల కోసం సాధారణ సూచనలు (General Suggestions for Improvement based on standard practices):**\n* ప్రాజెక్ట్‌లు మరియు అనుభవాల విభాగంలో కేవలం చేసిన పనులే కాకుండా, వాటి ద్వారా సాధించిన **ఫలితాలు/ప్రభావాన్ని (Impact & Metrics)** సంఖ్యాపరంగా (percentages లేదా numbers లో) చేర్చడం ద్వారా రెజ్యూమ్‌ను మరింత ఆకర్షణీయంగా మార్చవచ్చు.\n* ఇచ్చిన డాక్యుమెంట్‌లో లేనప్పటికీ, భవిష్యత్తులో మరిన్ని సర్టిఫికేషన్‌లు లేదా హాకథాన్ విజయాలను జోడించవచ్చు."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:27:31.687Z"
+    },
+    {
+      "id": "862c6b95-7b5e-46be-9770-bb2aa50f3702",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "xrw4Cm1PoUtQLWZE",
+      "role": "user",
+      "parts": {
+        "id": "xrw4Cm1PoUtQLWZE",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give the changes to be maade for the better improvement of Resume"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:27:54.429Z"
+    },
+    {
+      "id": "ac053e8e-5de3-4a16-92e6-507220f4173d",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "KIoJrk28t6Zi7ZSV",
+      "role": "assistant",
+      "parts": {
+        "id": "KIoJrk28t6Zi7ZSV",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document excerpts, the resume already includes a professional summary, technical skills, professional experience, projects, education, certifications, achievements, and languages [1], [2], [3], [4]. However, the provided context does not contain any specific suggestions, critiques, or recommendations for improving the resume. \n\nIf you would like, you can provide additional context or criteria, and I will be happy to help you analyze it based strictly on the uploaded documents!"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:27:56.582Z"
+    },
+    {
+      "id": "d611a833-7a6f-4bb4-96ca-eefa76507729",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "SP9wS1yCh6QFNyjv",
+      "role": "user",
+      "parts": {
+        "id": "SP9wS1yCh6QFNyjv",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "ram charan gurinchi ivvandi"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T02:28:22.349Z"
+    },
+    {
+      "id": "b1242920-9173-4e2b-b996-b4bc5bf59f3f",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "yHB9gaS31BC5B4No",
+      "role": "assistant",
+      "parts": {
+        "id": "yHB9gaS31BC5B4No",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "**రాంచరణ్ సంగమోని (Ramcharan Sangamoni)** గురించిన వివరాలు:\n\n* **వృత్తి / విద్య:** ఇతను హైదరాబాద్, తెలంగాణకు చెందిన ఒక కంప్యూటర్ సైన్స్ ఇంజనీరింగ్ విద్యార్థి [1]. \n* **వృత్తిపరమైన సారాంశం (Professional Summary):** ఫుల్-స్టాక్ డెవలప్‌మెంట్, మెషిన్ లెర్నింగ్ మరియు IoT-ఆధారిత అప్లికేషన్లలో అనుభవం ఉన్న ఒక సిస్టమాటిక్ మరియు వేగంగా నేర్చుకునే విద్యార్థి [1].\n* **సాంకేతిక నైపుణ్యాలు (Technical Skills):**\n  * **కోర్ భాషలు:** జావా (Java), పైథాన్ (Python), సి (C), జావాస్క్రిప్ట్ (JavaScript), ఎస్సక్యూఎల్ (SQL) [1].\n  * **ఫ్రేమ్‌వర్క్‌లు & టూల్స్:** రియాక్ట్.జెఎస్ (React.js), నోడ్.జెఎస్ (Node.js), ఎక్స్‌ప్రెస్.జెఎస్ (Express.js), గిట్ (Git), గిట్‌హబ్ (GitHub), విఎస్ కోడ్ (VS Code) [1].\n  * **ప్లాట్‌ఫారమ్‌లు & డేటాబేస్‌లు:** మోంగోడీబీ (MongoDB) [1].\n* **అనుభవం (Professional Experience):** హైదరాబాద్‌లోని 'ఓయాసిస్ ఇన్ఫోబైట్' (Oasis Infobyte) సంస్థలో డేటా అనలిటిక్స్ ఇంటర్న్‌గా పనిచేశారు [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T02:28:25.114Z"
+    },
+    {
+      "id": "13c72c3b-d0ef-4964-b1fd-fe932d553951",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "VCxN94JZ5awCQH5y",
+      "role": "user",
+      "parts": {
+        "id": "VCxN94JZ5awCQH5y",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give me the uml diagram mention"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:38:52.373Z"
+    },
+    {
+      "id": "a8076caa-486e-4b88-91d6-96c2ad46aba1",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "rumNBAkeaFaeIzoB",
+      "role": "assistant",
+      "parts": {
+        "id": "rumNBAkeaFaeIzoB",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, the system design uses several UML diagrams to represent the interaction and structure of its modules [1], [2]. These include:\n\n* **Use Case Diagram** [1], [2]\n* **Class Diagram** [1], [2]\n* **Sequence Diagram** [1], [2]\n* **Activity Diagram** [1], [2]\n* **Component Diagram** [1], [2]\n* **Deployment Diagram** [1], [2]\n\nAdditionally, a **Data Flow Diagram (DFD)** is used to represent the movement of data between users, processes, and data stores [1], [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "\") → Display Answer with Citations → View Source Passage → Save to Chat History The architecture follows a layered structure. The web frontend handles upload, chat, and the source viewer. The backend server exposes a RES"
+            },
+            {
+              "n": 2,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": " Diagram, Class Diagram, Sequence Diagram, Activity Diagram, Component Diagram, and Deployment Diagram. A Data Flow Diagram (DFD) is also used to represent the movement of data between users, processes, and data stores. "
+            },
+            {
+              "n": 3,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": " their embeddings. Input Document file (PDF, DOCX, or TXT) Document delete request Process Validate the file type and check that the size is within the configured limit (for example, 50 MB). Associate the document with t"
+            },
+            {
+              "n": 4,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "swers that do not show their sources. To gather and specify requirements: Identify the functional and non-functional requirements of DocuMind based on the needs of end users and administrators. To prepare the Software Re"
+            },
+            {
+              "n": 5,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "set of up to 500 pages under normal load Source Passage Viewing Within 2 seconds Chat History Loading Within 3 seconds Document Deletion (including embeddings) Within 5 seconds Error Message on LLM Failure or Timeout Sho"
+            },
+            {
+              "n": 6,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "em design activity defines the overall structure of DocuMind based on the requirements identified during requirement analysis and documented in the SRS. The system is divided into different modules so that each module pe"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:38:57.832Z"
+    },
+    {
+      "id": "c6f02c5f-e679-4dd7-bf80-4ce3ce326176",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "1OFwWYxE8DHFtN2N",
+      "role": "user",
+      "parts": {
+        "id": "1OFwWYxE8DHFtN2N",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "can you give the picture"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:39:17.534Z"
+    },
+    {
+      "id": "f9179337-b285-4c9f-a82a-89b49ffedf17",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "NxtYwCJRGDZrIPyQ",
+      "role": "assistant",
+      "parts": {
+        "id": "NxtYwCJRGDZrIPyQ",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded document (**documind-1.1.docx**):\n\nset of up to 500 pages under normal load Source Passage Viewing Within 2 seconds Chat History Loading Within 3 seconds Document Deletion (including embeddings) Within 5 seconds Error Message on LLM Failure or Timeout Shown as soon as the configured timeout is reached, without returning an incorrect answer Notes: The 5-second answer time for a 500-page document set comes directly from your SRS (section 3.2.1). The other response times are proposed targets for this prototype and can be adjusted to match your testing results. Where answers are streamed, the first part of the answer should appear within 2 seconds so the interface feels responsive. Response times depend on the speed of the LLM API and the network connection. Design Constraints The system will have the following design constraints: The system should follow the requirements documented in the SRS. User and administrator informat [1]\n\n**Relevant excerpts:**\n- Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for deployment. Scalability The backend serv... [2]\n- [1] annual_report.pdf, Page 12 For an LLM failure: Something went wrong while contacting the AI. Please try again. Functional Requirement 6: Handling Unanswerable Questions (FR6) (Maps to SRS FR-11) Description The system shall notify the user when a question ... [3]\n- source viewer, chat history, and citation features need them. System Flow Acceptance Criteria DocuMind will be considered successful if: Users can register and log in successfully. Users can upload documents in PDF, DOCX, and TXT formats. The system rejects un... [4]\n- \") → Display Answer with Citations → View Source Passage → Save to Chat History The architecture follows a layered structure. The web frontend handles upload, chat, and the source viewer. The backend server exposes a REST API and handles authentication and bus... [5]\n- atural-language question and retrieve the most relevant document chunks using semantic similarity search. Input Natural-language question Optional selection of documents to search Process Accept the question from the chat interface. Convert the question into a... [6]\n\n"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "set of up to 500 pages under normal load Source Passage Viewing Within 2 seconds Chat History Loading Within 3 seconds Document Deletion (including embeddings) Within 5 seconds Error Message on LLM Failure or Timeout Sho"
+            },
+            {
+              "n": 2,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for "
+            },
+            {
+              "n": 3,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": " [1] annual_report.pdf, Page 12 For an LLM failure: Something went wrong while contacting the AI. Please try again. Functional Requirement 6: Handling Unanswerable Questions (FR6) (Maps to SRS FR-11) Description The syst"
+            },
+            {
+              "n": 4,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "source viewer, chat history, and citation features need them. System Flow Acceptance Criteria DocuMind will be considered successful if: Users can register and log in successfully. Users can upload documents in PDF, DOCX"
+            },
+            {
+              "n": 5,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "\") → Display Answer with Citations → View Source Passage → Save to Chat History The architecture follows a layered structure. The web frontend handles upload, chat, and the source viewer. The backend server exposes a RES"
+            },
+            {
+              "n": 6,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "atural-language question and retrieve the most relevant document chunks using semantic similarity search. Input Natural-language question Optional selection of documents to search Process Accept the question from the cha"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:39:43.710Z"
+    },
+    {
+      "id": "6237ecc3-285c-4e72-9c89-5eb988cd5daa",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "HXj8I5e65JB7zxxZ",
+      "role": "user",
+      "parts": {
+        "id": "HXj8I5e65JB7zxxZ",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:46:35.743Z"
+    },
+    {
+      "id": "68b40201-b760-4113-8b8c-a9aa19c80ee7",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "uqpumLWpiOY0sUuo",
+      "role": "assistant",
+      "parts": {
+        "id": "uqpumLWpiOY0sUuo",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded document (**documind-1.1.docx**):\n\nn Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation of the system as a software prototype using free or low-cost APIs, without requiring specialized hardware. 6.4 Development Methodology The Waterfall Model can be used for developing the project. The development can proceed through the following stages: Requirement Analysis → SRS Preparation → System Design → Implementation → Testing → Evaluation 7. Software Engineering Activities 7.1 Requirement Analysis Requirement analysis is the process of identifying, examining, and documenting the requirements of DocuMind. It focuses on understanding the needs of users and administrators and defining what the system should provide. 7.1 Identification of Stakeholders End User: Needs [1]\n\n**Relevant excerpts:**\n- conversations. 5.3 Functional Requriements The system should provide the following functions: User registration and login. Upload of documents in PDF, DOCX, and TXT formats (FR-1). Automatic splitting of documents into text chunks (FR-2). Generation of embeddi... [2]\n- n understanding the needs of users and administrators and defining what the system should provide. 7.1 Identification of Stakeholders End User: Needs to upload documents, ask questions in natural language, get answers with source citations, and manage document... [3]\n- so contains the RAG pipeline, and it connects to an external LLM service. The architecture consists of the following layers: Presentation Layer This layer provides the web interface through which the user and administrator interact with the system. It includes... [4]\n- base. Acceptance of natural-language questions. Retrieval of the top-k relevant chunks using semantic search. Generation of answers constrained to the retrieved content. Display of source citations (document name, page/section) with every answer. Viewing of th... [5]\n- lows: Priority Requirements High Login, document upload, chunking and embedding, semantic retrieval, grounded answer generation, citations, \"cannot be answered\" notification Medium Source passage viewer, chat history, document deletion with embeddings, LLM err... [6]\n\n"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "n Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation"
+            },
+            {
+              "n": 2,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": " conversations. 5.3 Functional Requriements The system should provide the following functions: User registration and login. Upload of documents in PDF, DOCX, and TXT formats (FR-1). Automatic splitting of documents into "
+            },
+            {
+              "n": 3,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "n understanding the needs of users and administrators and defining what the system should provide. 7.1 Identification of Stakeholders End User: Needs to upload documents, ask questions in natural language, get answers wi"
+            },
+            {
+              "n": 4,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "so contains the RAG pipeline, and it connects to an external LLM service. The architecture consists of the following layers: Presentation Layer This layer provides the web interface through which the user and administrat"
+            },
+            {
+              "n": 5,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "base. Acceptance of natural-language questions. Retrieval of the top-k relevant chunks using semantic search. Generation of answers constrained to the retrieved content. Display of source citations (document name, page/s"
+            },
+            {
+              "n": 6,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "lows: Priority Requirements High Login, document upload, chunking and embedding, semantic retrieval, grounded answer generation, citations, \"cannot be answered\" notification Medium Source passage viewer, chat history, do"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:46:57.743Z"
+    },
+    {
+      "id": "e8457f15-4da8-4094-b145-ba62bd8ef1ac",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "Qlt8cF3QKkJL2yIS",
+      "role": "user",
+      "parts": {
+        "id": "Qlt8cF3QKkJL2yIS",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is  surename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:47:29.092Z"
+    },
+    {
+      "id": "5842db53-4fd4-45d9-99cd-db582a042bc3",
+      "thread_id": "e6b09795-403d-4ac6-b775-03c299f739be",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "DjGbCHSDoo4c2Kt7",
+      "role": "assistant",
+      "parts": {
+        "id": "DjGbCHSDoo4c2Kt7",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded document (**Ramcharan_Sangamoni_Resume_Exact_Template.pdf**) (page 1):\n\nt.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system. Plagiarism Detection System HTML, CSS, JavaScript, Python, Flask, NLP • Developed a plagiarism detection system using NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization. Construction Management Platform HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB • Developed a web-based construction management platform for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication. E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology [1]\n\n**Relevant excerpts:**\n- Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M A R Y Systematic and quick-learning Com... [2]\n- t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practical data analysis and project-based lear... [3]\n- . E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM SkillsBuild, Feb 2026. • NASSCOM FutureSkills... [4]\n\n"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:47:54.862Z"
+    },
+    {
+      "id": "2ae37eb1-0ab7-4d9d-b108-523f95fd4015",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "xyeofFRmmUrUUHvU",
+      "role": "user",
+      "parts": {
+        "id": "xyeofFRmmUrUUHvU",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surename of ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:48:15.705Z"
+    },
+    {
+      "id": "167c53dc-d752-4a09-90b4-4a080ef2ad6a",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "DxWgoUz9ErZee4bH",
+      "role": "assistant",
+      "parts": {
+        "id": "DxWgoUz9ErZee4bH",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "The surname of Ramcharan is **Sangamoni** [1], [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:48:29.154Z"
+    },
+    {
+      "id": "2441b837-53c1-4f29-832b-2177454643f9",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "Fys5zhFXjg1Gc10m",
+      "role": "user",
+      "parts": {
+        "id": "Fys5zhFXjg1Gc10m",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "technologies used in making the project"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:49:06.280Z"
+    },
+    {
+      "id": "ce8c4d39-b893-4bcb-b287-8a79b47fdd43",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "Jwo3e9VoShNqHCIj",
+      "role": "assistant",
+      "parts": {
+        "id": "Jwo3e9VoShNqHCIj",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded document (**documind-1.1.docx**):\n\nntent along with source citations, thereby improving the speed, accuracy, and reliability of information retrieval. 4. Learning Objectives The main objective of this project is to apply Software Engineering principles to analyze, design, develop, and test DocuMind, a RAG-based Q&A Assistant with Source Citations. The project aims to understand the challenges involved in retrieving accurate information from large document collections and to develop a systematic software-based approach to address them. The specific learning objectives are: To identify and analyze the problem: Understand the difficulties faced by users in finding specific information inside long documents, the limitations of keyword-based search, and the lack of trust in AI answers that do not show their sources. To gather and specify requirements: Identify the functional and non-functional requirements of DocuMind based on [1]\n\n**Relevant excerpts:**\n- n Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation of the system as a software prototype u... [2]\n- Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for deployment. Scalability The backend serv... [3]\n- so contains the RAG pipeline, and it connects to an external LLM service. The architecture consists of the following layers: Presentation Layer This layer provides the web interface through which the user and administrator interact with the system. It includes... [4]\n- set of up to 500 pages under normal load Source Passage Viewing Within 2 seconds Chat History Loading Within 3 seconds Document Deletion (including embeddings) Within 5 seconds Error Message on LLM Failure or Timeout Shown as soon as the configured timeout is ... [5]\n- ding the problem clearly before designing the proposed system. 5.1 Users/ Stakeholders The major stakeholders of the system are: End User (Student / Researcher / Professional): Uploads documents, asks natural-language questions, views answers with source citat... [6]\n\n"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "ntent along with source citations, thereby improving the speed, accuracy, and reliability of information retrieval. 4. Learning Objectives The main objective of this project is to apply Software Engineering principles to"
+            },
+            {
+              "n": 2,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "n Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation"
+            },
+            {
+              "n": 3,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for "
+            },
+            {
+              "n": 4,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "so contains the RAG pipeline, and it connects to an external LLM service. The architecture consists of the following layers: Presentation Layer This layer provides the web interface through which the user and administrat"
+            },
+            {
+              "n": 5,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "set of up to 500 pages under normal load Source Passage Viewing Within 2 seconds Chat History Loading Within 3 seconds Document Deletion (including embeddings) Within 5 seconds Error Message on LLM Failure or Timeout Sho"
+            },
+            {
+              "n": 6,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "ding the problem clearly before designing the proposed system. 5.1 Users/ Stakeholders The major stakeholders of the system are: End User (Student / Researcher / Professional): Uploads documents, asks natural-language qu"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:49:28.268Z"
+    },
+    {
+      "id": "acda6c1b-f796-4796-b63d-3b45e06d32be",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "61W4jevaGeksTrty",
+      "role": "user",
+      "parts": {
+        "id": "61W4jevaGeksTrty",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "technologies and tools used"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T06:55:46.364Z"
+    },
+    {
+      "id": "0a427fdf-f563-41df-b132-aff2c681f5cf",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "9FudaGwUFSVy5oxs",
+      "role": "assistant",
+      "parts": {
+        "id": "9FudaGwUFSVy5oxs",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on your uploaded document (**documind-1.1.docx**):\n\nn separately log in to manage users, monitor usage, and configure system settings. 6.3 Technologies and Tools For the software prototype, the following technologies/tools can be used: Frontend: Streamlit (simple version) or React with Vite, TypeScript and Tailwind (full version) Backend: Python 3.11+ (FastAPI for the full version) RAG Framework: LangChain or LlamaIndex (kept thin and modular) LLM: Gemini, OpenAI, or Anthropic API, selected through configuration Embedding Model: sentence-transformers (all-MiniLM-L6-v2) Vector Database: ChromaDB (FAISS or Pinecone as alternatives) Relational Database: SQLite for the demo, PostgreSQL for the full version Document Parsing: pypdf, python-docx Development Environment: VS Code / Antigravity Version Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: [1]\n\n**Relevant excerpts:**\n- chat sessions and messages, including citations, so that past conversations can be reopened. Administrator Module Allows the administrator to manage user accounts, monitor system usage, and configure LLM and vector database settings. 6.2 System Workflow The ba... [2]\n- uploaded documents, should be protected, and the system should comply with data privacy requirements. Availability The system should be available whenever users or administrators need to access document-management and question-answering functions, subject to s... [3]\n- Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for deployment. Scalability The backend serv... [4]\n- DocuMind, a Retrieval-Augmented Generation (RAG) based question-answering assistant, is proposed to meet this need.3 3.Background / Scenario Documents such as research papers, reports, policy manuals, study material, and technical guides are an important part ... [5]\n- n Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation of the system as a software prototype u... [6]\n\n"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "n separately log in to manage users, monitor usage, and configure system settings. 6.3 Technologies and Tools For the software prototype, the following technologies/tools can be used: Frontend: Streamlit (simple version)"
+            },
+            {
+              "n": 2,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": " chat sessions and messages, including citations, so that past conversations can be reopened. Administrator Module Allows the administrator to manage user accounts, monitor system usage, and configure LLM and vector data"
+            },
+            {
+              "n": 3,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "uploaded documents, should be protected, and the system should comply with data privacy requirements. Availability The system should be available whenever users or administrators need to access document-management and qu"
+            },
+            {
+              "n": 4,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "Portability The software should be capable of operating in commonly used computer environments that support the selected development technologies (Python and a modern web browser), and it can be packaged with Docker for "
+            },
+            {
+              "n": 5,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "DocuMind, a Retrieval-Augmented Generation (RAG) based question-answering assistant, is proposed to meet this need.3 3.Background / Scenario Documents such as research papers, reports, policy manuals, study material, and"
+            },
+            {
+              "n": 6,
+              "document": "documind-1.1.docx",
+              "page": null,
+              "snippet": "n Control and Packaging: Git and GitHub, Docker (full version) UI Design: Google Stitch / Figma Design and Modelling: StarUML / draw.io Documentation: MS Word / MS PowerPoint The selected tools can support implementation"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T06:56:07.309Z"
+    },
+    {
+      "id": "6dd760c4-1d09-49c6-8070-cc79d6bd07f9",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "cNga3V67z3zuDnEi",
+      "role": "user",
+      "parts": {
+        "id": "cNga3V67z3zuDnEi",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "tell about the resume details"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T07:58:17.646Z"
+    },
+    {
+      "id": "66105061-a404-4c84-bdc4-faf94a003a61",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "rNhw1rnnmgJNnbk0",
+      "role": "assistant",
+      "parts": {
+        "id": "rNhw1rnnmgJNnbk0",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "**Resume Details:**\n\n* **Education:** \n  * Bachelor of Technology in Computer Science Engineering (2024 – 2028) at Geetanjali College of Engineering and Technology, with a CGPA of 8.33 / 10 [1].\n\n* **Projects Developed:**\n  * **Medication Management Application:** Built using React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript. It helps users manage medication schedules with timely reminders, secure authentication, prescription management, and a nurse alert system [1].\n  * **Plagiarism Detection System:** Built using HTML, CSS, JavaScript, Python, Flask, and NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization [1].\n  * **Construction Management Platform:** Built using HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T07:58:29.932Z"
+    },
+    {
+      "id": "95ab8953-0b1d-4312-9359-9a8d04c36084",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "AvXywiraOHEYQfrU",
+      "role": "user",
+      "parts": {
+        "id": "AvXywiraOHEYQfrU",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "tell me about resume"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T08:06:29.494Z"
+    },
+    {
+      "id": "78623ebf-dde6-4995-8f15-9b1c0a4fa56f",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "btmmbLmNdSZmN6zv",
+      "role": "assistant",
+      "parts": {
+        "id": "btmmbLmNdSZmN6zv",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Here is an overview of the resume provided in the document:\n\n### **Professional Summary**\nRamcharan Sangamoni is a systematic and quick-learning Computer Science Engineering student based in Hyderabad, Telangana, with hands-on experience in full-stack development, machine learning, and IoT-based applications [3]. He is skilled in building data-driven, user-focused solutions and adapting rapidly to new technologies [3].\n\n### **Education**\n* **Degree:** Bachelor of Technology in Computer Science Engineering (2024 – 2028) [2]\n* **Institution:** Geetanjali College of Engineering and Technology [2]\n* **CGPA:** 8.33 / 10 [2]\n\n### **Technical Skills**\n* **Core Languages:** Java, Python, C, JavaScript, SQL [3]\n* **Frameworks & Tools:** React.js, Node.js, Express.js, Git, GitHub, VS Code, npm [3]\n* **Platforms & Databases:** MongoDB [3]\n* **Soft Skills & Practices:** Problem Solving, Teamwork, Communication, Time Management, Adaptability, Quick Learning, Leadership [3]\n\n### **Professional Experience**\n* **Data Analytics Intern** — Oasis Infobyte, Hyderabad (May 5, 2026 – June 15, 2026) [1]\n  * Applied data cleaning, exploratory data analysis, visualization, and customer segmentation techniques to real-world datasets [1].\n  * Built and documented data analytics projects using Python, pandas, NumPy, Matplotlib, and scikit-learn [1].\n\n### **Projects**\n* **SmartCrop Monitor:** Smart agriculture application built with HTML, CSS, JavaScript, Python, Machine Learning, and IoT devices to monitor crop health [1].\n* **Smart Medication Alert System:** Full-stack web application (React.js, TypeScript, Node.js, Express.js, MongoDB) for medication schedules, reminders, secure authentication, and a nurse alert system [1], [2].\n* **Plagiarism Detection System:** Built using HTML, CSS, JavaScript, Python, Flask, and NLP techniques for text preprocessing, similarity analysis, and scoring [2].\n* **Construction Management Platform:** Web-based platform (React.js, Node.js, Express.js, MongoDB) for project planning, task management, progress monitoring, and resource allocation [2].\n\n### **Certifications & Achievements**\n* **Certifications:** Introduction to Generative AI (IBM SkillsBuild, Feb 2026), NASSCOM FutureSkills Prime (Digital Application Fundamentals), and Data Analytics Internship (Oasis Infobyte) [4].\n* **Achievements:** Participated in HackHazards 2026 [4].\n* **Languages Known:** English, Telugu, Hindi [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T08:06:39.831Z"
+    },
+    {
+      "id": "a05ec09b-1035-4782-a28b-ceb9c8ee4dd3",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "EUKv8zoZGbXPZEQ2",
+      "role": "user",
+      "parts": {
+        "id": "EUKv8zoZGbXPZEQ2",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is surename"
+          }
+        ]
+      },
+      "created_at": "2026-10-12T08:07:51.890Z"
+    },
+    {
+      "id": "37d7e553-5301-4cb8-80dc-4bd67a6ed071",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "YG0JTh0zdZA7n5u8",
+      "role": "assistant",
+      "parts": {
+        "id": "YG0JTh0zdZA7n5u8",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, Ramcharan's surname is **Sangamoni** [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-12T08:07:58.372Z"
+    },
+    {
+      "id": "5831b0a5-4239-4a78-ab0f-4b3d5718fb90",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "oKzsjUoYDQ8RqMFx",
+      "role": "user",
+      "parts": {
+        "id": "oKzsjUoYDQ8RqMFx",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "give me about Ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T02:28:49.266Z"
+    },
+    {
+      "id": "5bef0e59-1b76-49d7-aa46-5f9a6c876b85",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "KAi8V5s1ZL4VthKD",
+      "role": "assistant",
+      "parts": {
+        "id": "KAi8V5s1ZL4VthKD",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Here is a summary of Ramcharan Sangamoni based on the provided document:\n\n### **Professional Summary**\nRamcharan Sangamoni is a systematic and quick-learning Computer Science Engineering student based in Hyderabad, Telangana [1]. He has hands-on experience in full-stack development, machine learning, and IoT-based applications, with a strong ability to build data-driven, user-focused solutions [1].\n\n### **Education**\n* **Degree:** Bachelor of Technology in Computer Science Engineering (2024 – 2028) [4]\n* **Institution:** Geetanjali College of Engineering and Technology [4]\n* **CGPA:** 8.33 / 10 [4]\n\n### **Technical Skills**\n* **Core Languages:** Java, Python, C, JavaScript, SQL [1]\n* **Frameworks & Tools:** React.js, Node.js, Express.js, Git, GitHub, VS Code, npm [1]\n* **Platforms & Databases:** MongoDB [1]\n\n### **Professional Experience**\n* **Data Analytics Intern** at Oasis Infobyte, Hyderabad (May 2026 – June 2026) [1, 2]\n  * Focused on practical data analysis, data cleaning, exploratory data analysis, visualization, and customer segmentation [2].\n  * Built projects using Python, pandas, NumPy, Matplotlib, and scikit-learn [2].\n\n### **Key Projects**\n* **SmartCrop Monitor:** An IoT and machine learning-based agricultural application to monitor crop health and support farmer decision-making [2].\n* **Smart Medication Alert System:** A full-stack web application (React, Node, MongoDB) featuring timely reminders, authentication, prescription management, and nurse alerts [3].\n* **Plagiarism Detection System:** A Python/Flask and NLP-based system for text preprocessing, similarity analysis, and plagiarism scoring [3].\n* **Construction Management Platform:** A web-based platform for project planning, task management, progress monitoring, and resource allocation [3].\n\n### **Certifications & Achievements**\n* **Certifications:** Introduction to Generative AI (IBM SkillsBuild, Feb 2026), NASSCOM FutureSkills Prime (Digital Application Fundamentals), and Data Analytics Internship certification [4].\n* **Achievements:** Participated in HackHazards 2026 [4].\n* **Languages Known:** English, Telugu, and Hindi [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T02:28:53.263Z"
+    },
+    {
+      "id": "5e681f74-9822-42da-9056-817a9d85a090",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "awTglCiPxLzDzc77",
+      "role": "user",
+      "parts": {
+        "id": "awTglCiPxLzDzc77",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "where is stuided"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T02:29:01.260Z"
+    },
+    {
+      "id": "a65733a2-bd6a-4d81-a9fe-b61dd5a1739e",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "IgSgTttWXqnHOmip",
+      "role": "assistant",
+      "parts": {
+        "id": "IgSgTttWXqnHOmip",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Ramcharan studied a Bachelor of Technology in Computer Science Engineering at **Geetanjali College of Engineering and Technology** [2], [3]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T02:29:02.274Z"
+    },
+    {
+      "id": "4f35183a-a7bd-4968-b632-9761afb9a1c1",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "eZuJuqBfSg27VnjK",
+      "role": "user",
+      "parts": {
+        "id": "eZuJuqBfSg27VnjK",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "answer it in telugu"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T02:29:19.646Z"
+    },
+    {
+      "id": "b600d26b-2a4f-4d40-8e2c-0b3c74dd7b93",
+      "thread_id": "2104e9e0-7a77-457b-9ca1-f10c51bee242",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "2nf2IMULoc7vATlv",
+      "role": "assistant",
+      "parts": {
+        "id": "2nf2IMULoc7vATlv",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "నమస్కారం! మీరు మీ ప్రశ్లను తెలుగులో అడగలేదు. దయచేసి మీరు ఏ విషయం గురించి తెలుసుకోవాలనుకుంటున్నారో తెలుగులో అడగండి, నేను అందించిన పత్రం (డెక్యుమెంట్) ఆధారంగా సమాధానం ఇస్తాను [1], [2], [3], [4]. \n\n(ధృవీకరణ కొరకు, ఈ పత్రం రామ్‌చరణ్ సంగమోని అనే కంప్యూటర్ సైన్స్ ఇంజనీరింగ్ విద్యార్థి యొక్క రెజ్యూమ్ కి సంబంధించినది [1], [3].)"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T02:29:21.194Z"
+    },
+    {
+      "id": "d1301861-ac06-4ffd-888a-dcaba10db5e2",
+      "thread_id": "aa7206dd-dea3-48d3-9578-cc963cc044e2",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-1",
+      "role": "user",
+      "parts": {
+        "id": "msg-1",
+        "role": "user",
+        "parts": [
+          {
+            "text": "Who is Ramcharan?",
+            "type": "text"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:15:06.645Z"
+    },
+    {
+      "id": "07246ef1-dbc9-4dae-85f7-bb77bb694eb5",
+      "thread_id": "aa7206dd-dea3-48d3-9578-cc963cc044e2",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "85NpVbz2Bp0m7eRf",
+      "role": "assistant",
+      "parts": {
+        "id": "85NpVbz2Bp0m7eRf",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "**Ramcharan Sangamoni** is a Computer Science Engineering student based in Hyderabad, Telangana, studying at Geetanjali College of Engineering and Technology (2024–2028) with a CGPA of 8.33/10 [1], [3]. \n\nHe is a systematic and quick-learning professional with hands-on experience in full-stack development, machine learning, data analytics, and IoT-based applications [1], [2], [3]. Some of his key details include:\n\n* **Professional Experience:** Worked as a Data Analytics Intern at Oasis Infobyte, Hyderabad, focusing on data cleaning, exploratory data analysis, visualization, and customer segmentation using Python libraries like pandas, NumPy, Matplotlib, and scikit-learn [1], [2].\n* **Projects:** Developed applications such as SmartCrop Monitor (IoT and Machine Learning), Smart Medication Alert System (Full-stack MERN), Plagiarism Detection System (Flask and NLP), and a Construction Management Platform [2], [3].\n* **Certifications:** Includes \"Introduction to Generative AI\" from IBM SkillsBuild and NASSCOM FutureSkills Prime [4].\n* **Languages Known:** English, Telugu, and Hindi [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:15:09.395Z"
+    },
+    {
+      "id": "319e423e-6e7c-4ad1-a482-220c8ed1a6c1",
+      "thread_id": "test-thread-uuid",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-1",
+      "role": "user",
+      "parts": {
+        "id": "msg-1",
+        "role": "user",
+        "parts": [
+          {
+            "text": "Who is Ramcharan?",
+            "type": "text"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:15:20.046Z"
+    },
+    {
+      "id": "e5d0ef7a-776a-4ea9-86ca-93f82afd1214",
+      "thread_id": "test-thread-uuid",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "e8PthaD0VhPk2Rwd",
+      "role": "assistant",
+      "parts": {
+        "id": "e8PthaD0VhPk2Rwd",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "**Ramcharan Sangamoni** is a Computer Science Engineering student based in Hyderabad, Telangana [1]. He is studying for his Bachelor of Technology (B.Tech) in Computer Science Engineering at Geetanjali College of Engineering and Technology (2024–2028), holding a CGPA of 8.33 / 10 [3], [4]. \n\nHe is a systematic and quick-learning developer with hands-on experience in full-stack development, machine learning, and IoT-based applications [1]. His profile includes:\n* **Professional Experience:** Worked as a Data Analytics Intern at Oasis Infobyte, Hyderabad, where he focused on data cleaning, exploratory data analysis, visualization, and customer segmentation using Python and related libraries [1], [2].\n* **Projects:** Developed several tech solutions, including *SmartCrop Monitor*, *Smart Medication Alert System*, *Plagiarism Detection System*, and a *Construction Management Platform* [2], [3].\n* **Certifications:** Certified in \"Introduction to Generative AI\" by IBM SkillsBuild and \"Digital Application Fundamentals\" by NASSCOM FutureSkills Prime [4].\n* **Languages Known:** English, Telugu, and Hindi [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:15:22.535Z"
+    },
+    {
+      "id": "a63a415a-7548-4f19-9917-e05a0a0e466b",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "05i2Cz8n7viVEnla",
+      "role": "user",
+      "parts": {
+        "id": "05i2Cz8n7viVEnla",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "tell me about ramcharan"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:16:32.021Z"
+    },
+    {
+      "id": "a1a75840-8724-4d15-a9dc-8828d744258c",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "omABOPYirukvmBeL",
+      "role": "assistant",
+      "parts": {
+        "id": "omABOPYirukvmBeL",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "**Ramcharan Sangamoni** is a Computer Science Engineering student based in Hyderabad, Telangana [1]. Here is a summary of his background based on his resume:\n\n* **Professional Summary:** He is a systematic and quick-learning computer science student with hands-on experience in full-stack development, machine learning, and IoT-based applications. He excels at building data-driven solutions and adapting rapidly to new technologies [1].\n* **Education:** He is pursuing a Bachelor of Technology in Computer Science Engineering (2024–2028) at Geetanjali College of Engineering and Technology, maintaining a CGPA of 8.33 / 10 [3], [4].\n* **Technical Skills:** \n  * *Core Languages:* Java, Python, C, JavaScript, SQL [1].\n  * *Frameworks & Tools:* React.js, Node.js, Express.js, Git, GitHub, VS Code, npm, MongoDB [1].\n* **Professional Experience:** He completed a Data Analytics Internship at Oasis Infobyte in Hyderabad, where he worked on practical data analysis, data cleaning, visualization, customer segmentation, and project-based learning using Python, pandas, NumPy, Matplotlib, and scikit-learn [1], [2].\n* **Projects:** \n  * *SmartCrop Monitor:* An IoT and machine learning-based agriculture application for crop health monitoring [2].\n  * *Smart Medication Alert System:* A full-stack web application using React.js, Node.js, Express.js, and MongoDB for medication schedules and reminders [3].\n  * *Plagiarism Detection System:* A Python and Flask-based app utilizing NLP techniques for text similarity analysis [3].\n  * *Construction Management Platform:* A web-based platform for project planning and resource allocation [3].\n* **Certifications & Achievements:** Includes \"Introduction to Generative AI\" from IBM SkillsBuild, NASSCOM FutureSkills Prime certification, and participation in HackHazards 2026 [4].\n* **Languages Known:** English, Telugu, and Hindi [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:16:35.497Z"
+    },
+    {
+      "id": "10074196-843b-4177-85c8-20e7f8ec6e46",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "bStJxGO2dDSl7hni",
+      "role": "user",
+      "parts": {
+        "id": "bStJxGO2dDSl7hni",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "he is good skilled person"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:16:55.151Z"
+    },
+    {
+      "id": "ef3ee467-c9df-4043-aeef-f7a0b7f64bad",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "j8omU1LoaUt2fiYZ",
+      "role": "assistant",
+      "parts": {
+        "id": "j8omU1LoaUt2fiYZ",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Yes, Ramcharan Sangamoni is a skilled Computer Science student with expertise in multiple domains [3]. Based on his resume, his skills and qualifications include:\n\n* **Technical Skills:** \n  * Core languages such as Java, Python, C, JavaScript, and SQL [3].\n  * Frameworks and tools like React.js, Node.js, Express.js, Git, GitHub, VS Code, npm, and MongoDB [3].\n* **Professional Experience:** Completed a Data Analytics Internship at Oasis Infobyte, where he worked on data cleaning, exploratory data analysis, visualization, and customer segmentation using Python libraries like pandas, NumPy, Matplotlib, and scikit-learn [2].\n* **Projects:** Developed various practical applications, including a Smart Medication Alert System, a Plagiarism Detection System using NLP, a Construction Management Platform, and a SmartCrop Monitor using Machine Learning and IoT [1], [2].\n* **Soft Skills:** Problem-solving, teamwork, communication, time management, adaptability, quick learning, and leadership [2], [3]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:16:57.826Z"
+    },
+    {
+      "id": "99c63e82-3349-49d1-bc23-13a9c86ef226",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "7CzreXTNiPXWKKsg",
+      "role": "user",
+      "parts": {
+        "id": "7CzreXTNiPXWKKsg",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what is the surname of Ram Charan"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:17:09.854Z"
+    },
+    {
+      "id": "d83d502f-ecd5-4b70-b4aa-0435291faf16",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "lKtcpu5XEzkKj3S5",
+      "role": "assistant",
+      "parts": {
+        "id": "lKtcpu5XEzkKj3S5",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document, the surname of Ramcharan is **Sangamoni** [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:17:11.237Z"
+    },
+    {
+      "id": "d8baa4ef-e4ae-4a9f-b3bf-1a55df08dffa",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "FSRNZkBQU3WLhXx4",
+      "role": "user",
+      "parts": {
+        "id": "FSRNZkBQU3WLhXx4",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what project does he did effectively"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:17:26.884Z"
+    },
+    {
+      "id": "33271c62-537d-469b-963e-5aa23dd8e885",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "is3LwnlPx6d3PdW8",
+      "role": "assistant",
+      "parts": {
+        "id": "is3LwnlPx6d3PdW8",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, Ramcharan Sangamoni developed several projects effectively:\n\n* **Smart Medication Alert System**: A full-stack web application built using React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system [1], [2].\n* **Plagiarism Detection System**: A system developed using HTML, CSS, JavaScript, Python, Flask, and NLP techniques for text preprocessing, similarity analysis, plagiarism scoring, and result visualization [1].\n* **Construction Management Platform**: A web-based platform built with HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB for project planning, task management, progress monitoring, resource allocation, collaboration, and secure authentication [1].\n* **SmartCrop Monitor**: A smart agriculture application developed using HTML, CSS, JavaScript, Python, Machine Learning, and IoT devices to monitor crop health and support farmers with data-driven decision-making [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:17:29.159Z"
+    },
+    {
+      "id": "d2a265e9-4a6f-44f5-bb76-2dcb81d9f616",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "CoMTR8tOGerealJ0",
+      "role": "user",
+      "parts": {
+        "id": "CoMTR8tOGerealJ0",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "yeah now pick among these four projects which is most most relevant and most effective one"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:17:42.729Z"
+    },
+    {
+      "id": "a1180ac0-5a31-418b-a344-47edaf8e1ec7",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "2GZnjAqtC2W3VClQ",
+      "role": "assistant",
+      "parts": {
+        "id": "2GZnjAqtC2W3VClQ",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document excerpts, the most comprehensive and technologically impactful project listed is the **Smart Medication Alert System**. \n\nHere is why it stands out as a highly relevant and effective full-stack application:\n* **Advanced Tech Stack:** It utilizes a robust modern tech stack combining React.js, TypeScript, Node.js, Express.js, and MongoDB [1], [2].\n* **Real-World Impact:** It solves a critical healthcare/daily-living problem by helping users manage medication schedules through timely reminders, secure authentication, and prescription management [2].\n* **Critical Safety Features:** It includes a dedicated **nurse alert system**, which adds a vital layer of safety and emergency response [2].\n\n*(Note: Other projects like the **SmartCrop Monitor** [1], **Plagiarism Detection System**, and **Construction Management Platform** [2] are also well-rounded, but the Smart Medication Alert System integrates complex full-stack architecture with a critical life-care application.)*"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:17:45.761Z"
+    },
+    {
+      "id": "9ca3fe28-3331-4290-b377-37c295855f8d",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "IqzD8Lydnidba0Bh",
+      "role": "user",
+      "parts": {
+        "id": "IqzD8Lydnidba0Bh",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "differentiate between the extract used in smart medication alert system and then smart crop"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:18:04.764Z"
+    },
+    {
+      "id": "34213ae6-1881-4970-9522-2f3902d3ff1a",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "peDhva6Uq1FvsxB7",
+      "role": "assistant",
+      "parts": {
+        "id": "peDhva6Uq1FvsxB7",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document excerpts, here is the difference between the **Smart Medication Alert System** and the **SmartCrop Monitor** projects:\n\n* **Smart Medication Alert System**\n  * **Type:** Full-stack web application [1, 2].\n  * **Technologies Used:** React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript [1, 2].\n  * **Purpose / Features:** Designed to help users manage medication schedules through timely reminders, secure authentication, prescription management, and a nurse alert system [2].\n\n* **SmartCrop Monitor**\n  * **Type:** Smart agriculture application / IoT-based application [1, 3].\n  * **Technologies Used:** HTML, CSS, JavaScript, Python, Machine Learning, and IoT Devices [1].\n  * **Purpose / Features:** Developed to monitor crop health and support farmers with data-driven decision-making [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:18:07.112Z"
+    },
+    {
+      "id": "c7d21c9f-21c5-4916-a1f2-9d67ec3dabc7",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "XsKclI3Orx5qWmLR",
+      "role": "user",
+      "parts": {
+        "id": "XsKclI3Orx5qWmLR",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what are the advantages and disadvantages of smart medical alert system"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:18:30.434Z"
+    },
+    {
+      "id": "5f4d9d62-538d-4d71-83d4-0c383a4acf66",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "c1sh3IVpENOpAy2s",
+      "role": "assistant",
+      "parts": {
+        "id": "c1sh3IVpENOpAy2s",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document excerpts, here are the details regarding the Smart Medication Alert System:\n\n* **Features and Advantages:** \n  * It is a full-stack web application designed to help users efficiently manage their medication schedules [1], [2].\n  * Key functionalities include timely medication reminders, secure user authentication, prescription management, and a built-in nurse alert system [1].\n  * It is built using modern technologies like React.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript [1], [2].\n\n* **Disadvantages:**\n  * The provided documents **do not contain any information** regarding the disadvantages or limitations of the Smart Medication Alert System."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:18:32.985Z"
+    },
+    {
+      "id": "ea093b6b-97fc-4126-9d2c-2279a4c22dae",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "MCgXeHjZwI6EmTKf",
+      "role": "user",
+      "parts": {
+        "id": "MCgXeHjZwI6EmTKf",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "వాట్ ఇస్ ద వాట్ ఇస్ ది సర్ నేమ్ ఆఫ్ రామ్ చరణ్"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T12:19:12.785Z"
+    },
+    {
+      "id": "44e1da5c-121a-44fd-9efa-6b4dc2f8b6ca",
+      "thread_id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "WXJNLSXWwlmNObKn",
+      "role": "assistant",
+      "parts": {
+        "id": "WXJNLSXWwlmNObKn",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రామ్ చరణ్ గారి సర్ నేమ్ (ఇంటి పేరు) **సంగమోని (Sangamoni)** [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T12:19:14.711Z"
+    },
+    {
+      "id": "d752c99d-5452-4d70-a2e6-8f13163d3bdd",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "QqhV2aJbDEwAM2w3",
+      "role": "user",
+      "parts": {
+        "id": "QqhV2aJbDEwAM2w3",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "project does this textiles"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T13:26:27.409Z"
+    },
+    {
+      "id": "38c94b4b-8c89-4426-ba66-d3908ed57afb",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "udHc9sk8zPsxwEho",
+      "role": "assistant",
+      "parts": {
+        "id": "udHc9sk8zPsxwEho",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided document excerpts, there is no mention of \"textiles\" or any textile-related project. The documents exclusively describe **\"TripGenie — AI Travel Itinerary Generator\"**, which is an AI-powered travel-planning application and functional prototype [1]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "# Build a Complete Functional Prototype: TripGenie — AI Travel Itinerary Generator Build a complete, functional, responsive travel-planning application called **TripGenie — AI Travel Itinerary Generator**. The applicatio"
+            },
+            {
+              "n": 2,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "tes. 9. Recalculate the budget. 10. Show a concise summary of changes. Require user confirmation before discarding substantial existing itinerary content. If the AI cannot find a suitable replacement, explain why and sug"
+            },
+            {
+              "n": 3,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "erence during recommendation ranking. Do not guarantee that a restaurant accommodates a dietary requirement unless this can be verified. Allow users to replace a restaurant and refresh the relevant route and budget. --- "
+            },
+            {
+              "n": 4,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "isplay: - Destination - Travel dates - Day-by-day itinerary - Activities - Restaurants - Interactive Google Map - Routes - Estimated budget Do not expose private user information, email addresses, profile details, authen"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T13:26:33.163Z"
+    },
+    {
+      "id": "cf74ecff-b475-489e-8ee1-5feef9811726",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "PGwkH5RRomHExfWp",
+      "role": "user",
+      "parts": {
+        "id": "PGwkH5RRomHExfWp",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "what database is used in developing the project"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T13:26:54.555Z"
+    },
+    {
+      "id": "b476d411-87cc-4211-b9f4-495dc4d5693e",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "c5yqHPrYf8bOyGhP",
+      "role": "assistant",
+      "parts": {
+        "id": "c5yqHPrYf8bOyGhP",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "ఈ ప్రాజెక్ట్ అభివృద్ధిలో పర్సిస్టెంట్ డేటా స్టోర్ (Persistent data store) కోసం **Supabase** ఉపయోగించబడుతుంది [2]. \n\nఅలాగే, Supabase కాన్ఫిగర్ చేయనప్పుడు లోకల్ డెమో మోడ్ (Local demo mode) కూడా సపోర్ట్ చేయబడుతుంది [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "erence during recommendation ranking. Do not guarantee that a restaurant accommodates a dietary requirement unless this can be verified. Allow users to replace a restaurant and refresh the relevant route and budget. --- "
+            },
+            {
+              "n": 2,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "imates if used instead of forecasts. If weather forecasts are not available for the full trip period, indicate which dates lack forecast coverage. --- # 22. SAVED TRIPS Allow authenticated users to: - Save a new trip - V"
+            },
+            {
+              "n": 3,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "y 1 - Day 2 - Day 3 - Additional trip days - Show All Days When a user selects a day: - Display only that day's locations by default. - Update map markers. - Update the route. - Fit bounds to the day's visible stops. - H"
+            },
+            {
+              "n": 4,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "cted place name, Google Place ID, and coordinates. - Support cities, addresses, landmarks, airports, and other supported place types. - Resolve selected locations into latitude and longitude. - Allow manual entry when au"
+            },
+            {
+              "n": 5,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "sharing mechanism. - Public users cannot modify shared trips. - Users cannot make another person's private trip public without authorization. - Profile access is limited appropriately. Use Supabase Auth and the authentic"
+            },
+            {
+              "n": 6,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "itional libraries only when needed. Use Google Cloud API restrictions to restrict browser keys to the appropriate websites and APIs. Do not put unrestricted server credentials in frontend environment variables. If the AP"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T13:26:58.144Z"
+    },
+    {
+      "id": "c521c29e-9b18-459d-ad24-ba547334b453",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "iuQ07kZs5w8YSzuT",
+      "role": "user",
+      "parts": {
+        "id": "iuQ07kZs5w8YSzuT",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "you just name the project once"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T13:27:14.059Z"
+    },
+    {
+      "id": "46d0f489-b8ec-4123-8ec4-5a38897b012d",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "jUlsMrlAuHYKJ4V3",
+      "role": "assistant",
+      "parts": {
+        "id": "jUlsMrlAuHYKJ4V3",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, the project text does not explicitly mention a specific name for the project."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": " \"Welcome back 👋\" \"Where are you going next?\" Add a prominent **+ Create New Trip** button. Display upcoming and saved trip cards containing: - Destination - Travel dates - Number of days and nights - Number of traveler"
+            },
+            {
+              "n": 2,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": " Identify the associated itinerary location. 2. Highlight the corresponding timeline item. 3. Show the location details. On mobile, stack the content vertically and provide a convenient map expansion or fullscreen option"
+            },
+            {
+              "n": 3,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "cted place name, Google Place ID, and coordinates. - Support cities, addresses, landmarks, airports, and other supported place types. - Resolve selected locations into latitude and longitude. - Allow manual entry when au"
+            },
+            {
+              "n": 4,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "itional libraries only when needed. Use Google Cloud API restrictions to restrict browser keys to the appropriate websites and APIs. Do not put unrestricted server credentials in frontend environment variables. If the AP"
+            },
+            {
+              "n": 5,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "d schedules. Each activity should include: - Time - Name - Category - Description - Expected duration - Estimated cost - Location - Distance to the next stop, when available Actions: - View on Map - View Details - Edit A"
+            },
+            {
+              "n": 6,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "tes. 9. Recalculate the budget. 10. Show a concise summary of changes. Require user confirmation before discarding substantial existing itinerary content. If the AI cannot find a suitable replacement, explain why and sug"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T13:27:17.050Z"
+    },
+    {
+      "id": "78305b6d-fa8a-4ba5-8d8e-62854d5dff52",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "OQN0VvwukAGGVqcB",
+      "role": "user",
+      "parts": {
+        "id": "OQN0VvwukAGGVqcB",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "project is mentioned in the text"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T13:27:37.406Z"
+    },
+    {
+      "id": "1405cfe1-3d5c-421a-9f7f-ed9f74654de3",
+      "thread_id": "88e61bbc-c31d-4e24-aeea-2255ccade3d1",
+      "user_id": "232fb20f-8180-496f-8d44-b754edac777e",
+      "ui_id": "dyrNpRuze5CKYWMK",
+      "role": "assistant",
+      "parts": {
+        "id": "dyrNpRuze5CKYWMK",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided text, the project involves building a trip planning and itinerary generation application with several key features and integrations:\n\n* **Google Maps & Route Visualization**: Creating a routing service (`src/services/routeService.ts`) to calculate routes, display estimated distances, support various transportation modes, and update map markers and bounds dynamically based on selected trip days [1]. It also requires configuring Google Cloud APIs such as the Maps JavaScript API, Places API, and Directions or Routes API [3].\n* **Google Places & Location Search**: Implementing location discovery using Places Autocomplete and Place Details for starting locations, destinations, hotels, and activities [4].\n* **Trip Setup Steps**: \n  * **Dates**: Calculating trip duration and validating dates [2].\n  * **Travelers**: Tracking adults, children, and total travelers [2].\n  * **Budget**: Supporting options like budget, moderate, luxury, or custom budgets (e.g., ₹15,000) with currency selection [2].\n  * **Travel Style & Food Preferences**: Supporting multiple styles (adventure, beach, culture, etc.) and dietary preferences (vegetarian, vegan, Jain, etc.) [5].\n  * **Transportation & Special Requirements**: Choosing transport modes (walking, public transport, taxi, etc.) and adding custom requirements [5].\n* **AI Itinerary Generation**: Secure backend-powered itinerary generation based on user preferences [5].\n* **Security & Authentication**: Using Supabase Auth and Edge Functions for secure authorization, protecting API keys, and providing RLS (Row Level Security) policies [3].\n* **Weather Integration**: Implementing a weather service (`src/services/weatherService.ts`) to display temperature, conditions, and forecasts on daily itinerary cards [6]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "y 1 - Day 2 - Day 3 - Additional trip days - Show All Days When a user selects a day: - Display only that day's locations by default. - Update map markers. - Update the route. - Fit bounds to the day's visible stops. - H"
+            },
+            {
+              "n": 2,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "cted place name, Google Place ID, and coordinates. - Support cities, addresses, landmarks, airports, and other supported place types. - Resolve selected locations into latitude and longitude. - Allow manual entry when au"
+            },
+            {
+              "n": 3,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "sharing mechanism. - Public users cannot modify shared trips. - Users cannot make another person's private trip public without authorization. - Profile access is limited appropriately. Use Supabase Auth and the authentic"
+            },
+            {
+              "n": 4,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "itional libraries only when needed. Use Google Cloud API restrictions to restrict browser keys to the appropriate websites and APIs. Do not put unrestricted server credentials in frontend environment variables. If the AP"
+            },
+            {
+              "n": 5,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "early state whether the estimate is per person or for the entire group. ### Step 5 — Travel Style Support multiple selections: - Adventure - Beach - Nature - History - Culture - Food - Shopping - Nightlife - Photography "
+            },
+            {
+              "n": 6,
+              "document": "ai_studio_code.txt",
+              "page": null,
+              "snippet": "erence during recommendation ranking. Do not guarantee that a restaurant accommodates a dietary requirement unless this can be verified. Allow users to replace a restaurant and refresh the relevant route and budget. --- "
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T13:27:41.948Z"
     }
   ]
 }
