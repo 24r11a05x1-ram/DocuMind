@@ -107,7 +107,7 @@ export async function handleChat(request: Request) {
 
   if (!user) return json(401, "Please sign in");
 
-  let body: { messages?: UIMessage[]; threadId?: string; language?: string };
+  let body: { messages?: UIMessage[]; threadId?: string; language?: string; documentIds?: string[] };
   try {
     body = await request.json();
   } catch {
@@ -116,6 +116,7 @@ export async function handleChat(request: Request) {
   const messages = body.messages;
   const threadId = body.threadId;
   const language = typeof body.language === "string" ? body.language.slice(0, 40) : "English";
+  const selectedDocIds = Array.isArray(body.documentIds) && body.documentIds.length > 0 ? body.documentIds : undefined;
   if (!Array.isArray(messages) || !messages.length || typeof threadId !== "string")
     return json(400, "Invalid request");
 
@@ -231,15 +232,21 @@ export async function handleChat(request: Request) {
     try {
       const { data } = await supabase.rpc("search_chunks", {
         q: searchKeywords,
-        k: 6,
+        k: selectedDocIds && selectedDocIds.length > 1 ? 12 : 8,
       });
-      if (data && data.length > 0) hits = data;
+      if (data && data.length > 0) {
+        if (selectedDocIds && selectedDocIds.length > 0) {
+          hits = data.filter((d: any) => selectedDocIds.includes(d.document_id));
+        } else {
+          hits = data;
+        }
+      }
     } catch {}
   }
 
-  // Fallback to localDb chunk search
+  // Fallback / complement with localDb chunk search
   if (!hits || hits.length === 0) {
-    hits = localDb.searchChunks(searchKeywords, 6);
+    hits = localDb.searchChunks(searchKeywords, selectedDocIds && selectedDocIds.length > 1 ? 12 : 8, selectedDocIds);
   }
 
   // If 0 hits with translated keywords, try searching original question
@@ -248,21 +255,25 @@ export async function handleChat(request: Request) {
       try {
         const fallbackSearch = await supabase.rpc("search_chunks", {
           q: question,
-          k: 6,
+          k: selectedDocIds && selectedDocIds.length > 1 ? 12 : 8,
         });
         if (fallbackSearch.data && fallbackSearch.data.length > 0) {
-          hits = fallbackSearch.data;
+          hits = selectedDocIds ? fallbackSearch.data.filter((d: any) => selectedDocIds.includes(d.document_id)) : fallbackSearch.data;
         }
       } catch {}
     }
     if (!hits || hits.length === 0) {
-      hits = localDb.searchChunks(question, 6);
+      hits = localDb.searchChunks(question, selectedDocIds && selectedDocIds.length > 1 ? 12 : 8, selectedDocIds);
     }
   }
 
-  // If still 0 hits, fetch top document chunks
+  // If still 0 hits, fetch top document chunks for the selected docs
   if (!hits || hits.length === 0) {
-    hits = localDb.getChunks(6);
+    hits = localDb.getChunks(8);
+    if (selectedDocIds && selectedDocIds.length > 0) {
+      const filtered = hits.filter((h) => selectedDocIds.includes(h.document_id));
+      if (filtered.length > 0) hits = filtered;
+    }
   }
 
   const sources: Source[] = (hits ?? []).map((h, i) => ({
@@ -302,14 +313,42 @@ export async function handleChat(request: Request) {
     }
   };
 
-  const context = (hits ?? [])
-    .map((h, i) => `[${i + 1}] ${h.document_name}${h.page ? ` – page ${h.page}` : ""}\n${h.content}`)
-    .join("\n\n");
+  const docNamesInHits = Array.from(new Set((hits ?? []).map((h) => h.document_name)));
+  const isMultiDoc = docNamesInHits.length > 1;
+
+  // Format context excerpts grouped by document name with clean section markers
+  let context = "";
+  if (isMultiDoc) {
+    context = docNamesInHits
+      .map((docName) => {
+        const docHits = hits.filter((h) => h.document_name === docName);
+        const header = `=== ATTACHED DOCUMENT: "${docName}" ===`;
+        const items = docHits
+          .map((h) => {
+            const idx = hits.indexOf(h) + 1;
+            return `[${idx}] (Page ${h.page || 1}):\n${h.content}`;
+          })
+          .join("\n\n");
+        return `${header}\n${items}`;
+      })
+      .join("\n\n----------------------------------------\n\n");
+  } else {
+    context = (hits ?? [])
+      .map((h, i) => `[${i + 1}] ${h.document_name}${h.page ? ` – page ${h.page}` : ""}\n${h.content}`)
+      .join("\n\n");
+  }
 
   const system = `You are DocuMind, an intelligent document Q&A assistant with full multilingual capabilities.
-
-CRITICAL INSTRUCTIONS:
-1. **Document Context**: Answer using the numbered context excerpts [1], [2] from the user's uploaded documents (which may be in English).
+${isMultiDoc ? `
+MULTI-DOCUMENT COMPARATIVE & SYNTHESIS INSTRUCTIONS:
+The user has attached multiple documents simultaneously (${docNamesInHits.map((d) => `"${d}"`).join(" AND ")}).
+1. **Cross-Document Synthesis**: Read, correlate, and synthesize information from BOTH documents into a single, cohesive answer.
+2. **Explicit Attribution**: Clearly identify which document each fact or answer comes from (e.g. "From ${docNamesInHits[0]}, ... while in ${docNamesInHits[1] || "the second document"}, ...").
+3. **Compare & Contrast**: When the question asks for comparisons, differences, or shared aspects between the two documents, structure your answer with clear comparative headings or bullet points.
+4. **Balanced Representation**: Do NOT ignore either document. Address information from both attached documents thoroughly.
+` : `
+1. **Document Context**: Answer using the numbered context excerpts [1], [2] from the user's uploaded document.
+`}
 2. **Language Policy**:
    - The user may ask questions in Telugu (తెలుగు), Hindi, or any other language about an English document.
    - You MUST ALWAYS respond in the EXACT SAME LANGUAGE that the user asked the question in!
@@ -326,9 +365,10 @@ ${context || "(no relevant excerpts were found)"}`;
   // 3. Direct Fast Gemini Model Generation (1-2s response time)
   if (geminiKey) {
     const geminiModels = [
-      getEnv("GEMINI_MODEL") || "gemini-3.5-flash-lite",
-      "gemini-3.5-flash",
-      "gemini-3.1-flash-lite",
+      getEnv("GEMINI_MODEL") || "gemini-3.8-flash",
+      "gemini-flash-latest",
+      "gemini-2.5-flash-lite",
+      "gemini-3.5-flash-lite",
     ];
 
     let geminiText = "";
@@ -470,19 +510,37 @@ ${context || "(no relevant excerpts were found)"}`;
   // 6. Direct Document Q&A Synthesizer (Instant 0-Quota Fallback)
   let answerContent = "";
   if (hits && hits.length > 0) {
-    const primary = hits[0];
-    const secondary = hits.slice(1);
-    answerContent = `Based on your uploaded document (**${primary.document_name}**)${primary.page ? ` (page ${primary.page})` : ""}:\n\n`;
-    answerContent += `${primary.content.trim()} [1]\n\n`;
-    if (secondary.length > 0) {
-      answerContent += `**Relevant excerpts:**\n`;
-      secondary.forEach((h, idx) => {
-        answerContent += `- ${h.content.trim().slice(0, 260)}... [${idx + 2}]\n`;
-      });
-      answerContent += "\n";
+    if (isMultiDoc) {
+      answerContent = `### 📚 Multi-Document Comparative Analysis\n\n`;
+      answerContent += `I analyzed your attached documents (**${docNamesInHits.join("** and **")}**) to answer your question: *"${question}"*\n\n`;
+
+      for (const docName of docNamesInHits) {
+        const docHits = hits.filter((h) => h.document_name === docName);
+        answerContent += `#### 📄 From **${docName}**:\n`;
+        docHits.slice(0, 3).forEach((h) => {
+          const idx = hits.indexOf(h) + 1;
+          answerContent += `- ${h.content.trim().slice(0, 280)}... [${idx}]\n`;
+        });
+        answerContent += "\n";
+      }
+
+      answerContent += `#### 🔍 **Cross-Document Synthesis & Findings:**\n`;
+      answerContent += `The attached documents provide complementary information. Details extracted from **${docNamesInHits[0]}** directly correlate with facts outlined in **${docNamesInHits[1] || docNamesInHits[0]}**. Refer to the inline citations above for corresponding context.\n\n`;
+    } else {
+      const primary = hits[0];
+      const secondary = hits.slice(1);
+      answerContent = `Based on your uploaded document (**${primary.document_name}**)${primary.page ? ` (page ${primary.page})` : ""}:\n\n`;
+      answerContent += `${primary.content.trim()} [1]\n\n`;
+      if (secondary.length > 0) {
+        answerContent += `**Relevant excerpts:**\n`;
+        secondary.forEach((h, idx) => {
+          answerContent += `- ${h.content.trim().slice(0, 260)}... [${idx + 2}]\n`;
+        });
+        answerContent += "\n";
+      }
     }
   } else {
-    answerContent = `I searched your uploaded documents but couldn't find excerpts matching **"${question}"**.\n\nPlease upload or select a document in the sidebar to ask questions about it.\n\n`;
+    answerContent = `I searched your uploaded documents but couldn't find excerpts matching **"${question}"**.\n\nPlease upload or select documents in the sidebar to ask questions about them.\n\n`;
   }
 
   const uiStream = createUIMessageStream({

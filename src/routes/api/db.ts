@@ -96,7 +96,7 @@ export const Route = createFileRoute("/api/db")({
           }
 
           if (action === "chunks_search") {
-            const results = localDb.searchChunks(payload?.q || "", payload?.k || 6);
+            const results = localDb.searchChunks(payload?.q || "", payload?.k || 8, payload?.document_ids);
             return json({ data: results });
           }
 

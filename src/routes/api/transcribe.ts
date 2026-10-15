@@ -18,7 +18,7 @@ function getEnv(key: string): string | undefined {
         const content = fs.readFileSync(envPath, "utf-8");
         for (const line of content.split("\n")) {
           const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
-          if (match) {
+          if (match && match[1]) {
             let val = (match[2] || "").trim();
             if (
               (val.startsWith('"') && val.endsWith('"')) ||

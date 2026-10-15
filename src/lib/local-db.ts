@@ -284,7 +284,7 @@ export const localDb = {
     }));
   },
 
-  searchChunks(query: string, limit = 6): {
+  searchChunks(query: string, limit = 8, documentIds?: string[]): {
     id: string;
     document_id: string;
     document_name: string;
@@ -296,6 +296,11 @@ export const localDb = {
     if (!db.chunks.length) return [];
 
     const docs = new Map(db.documents.map((d) => [d.id, d.name]));
+    const targetDocIds = Array.isArray(documentIds) && documentIds.length > 0 ? documentIds : null;
+    const eligibleChunks = targetDocIds ? db.chunks.filter((c) => targetDocIds.includes(c.document_id)) : db.chunks;
+
+    if (!eligibleChunks.length) return [];
+
     const terms = query
       .toLowerCase()
       .split(/\s+/)
@@ -303,7 +308,23 @@ export const localDb = {
       .filter((t) => t.length > 1);
 
     if (!terms.length) {
-      return db.chunks.slice(0, limit).map((c) => ({
+      if (targetDocIds && targetDocIds.length > 1) {
+        const perDoc = Math.max(2, Math.ceil(limit / targetDocIds.length));
+        const res: any[] = [];
+        for (const docId of targetDocIds) {
+          const docChunks = eligibleChunks.filter((c) => c.document_id === docId).slice(0, perDoc);
+          res.push(...docChunks.map((c) => ({
+            id: c.id,
+            document_id: c.document_id,
+            document_name: docs.get(c.document_id) || "Document",
+            page: c.page,
+            content: c.content,
+            rank: 0.1,
+          })));
+        }
+        return res;
+      }
+      return eligibleChunks.slice(0, limit).map((c) => ({
         id: c.id,
         document_id: c.document_id,
         document_name: docs.get(c.document_id) || "Document",
@@ -313,12 +334,11 @@ export const localDb = {
       }));
     }
 
-    const scored = db.chunks.map((c) => {
+    const scored = eligibleChunks.map((c) => {
       const lower = c.content.toLowerCase();
       let score = 0;
       for (const term of terms) {
         if (lower.includes(term)) {
-          // Count occurrences
           const matches = lower.split(term).length - 1;
           score += matches * 2 + term.length;
         }
@@ -332,6 +352,42 @@ export const localDb = {
         rank: score,
       };
     });
+
+    // Multi-Document Balanced Distribution:
+    // When 2+ documents are attached, ensure balanced retrieval so BOTH documents are represented!
+    const activeDocIds = targetDocIds || Array.from(new Set(eligibleChunks.map((c) => c.document_id)));
+    if (activeDocIds.length > 1) {
+      const perDocLimit = Math.max(3, Math.ceil(limit / activeDocIds.length));
+      const balancedResults: typeof scored = [];
+
+      for (const docId of activeDocIds) {
+        const docMatches = scored
+          .filter((s) => s.document_id === docId && s.rank > 0)
+          .sort((a, b) => b.rank - a.rank)
+          .slice(0, perDocLimit);
+
+        if (docMatches.length > 0) {
+          balancedResults.push(...docMatches);
+        } else {
+          // If no keyword match for this document, include top excerpt so model has context
+          const fallbackChunk = eligibleChunks.find((c) => c.document_id === docId);
+          if (fallbackChunk) {
+            balancedResults.push({
+              id: fallbackChunk.id,
+              document_id: fallbackChunk.document_id,
+              document_name: docs.get(fallbackChunk.document_id) || "Document",
+              page: fallbackChunk.page,
+              content: fallbackChunk.content,
+              rank: 0.05,
+            });
+          }
+        }
+      }
+
+      if (balancedResults.length > 0) {
+        return balancedResults.sort((a, b) => b.rank - a.rank).slice(0, Math.max(limit, activeDocIds.length * 3));
+      }
+    }
 
     return scored
       .filter((s) => s.rank > 0)

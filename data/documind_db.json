@@ -15,6 +15,13 @@
   ],
   "threads": [
     {
+      "id": "2c99dd76-1ea6-4ba1-9cf7-0cecbade0635",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "New chat",
+      "created_at": "2026-10-15T14:22:00.449Z",
+      "updated_at": "2026-10-15T14:22:00.449Z"
+    },
+    {
       "id": "4ae627a2-f0c1-4da0-b6ef-c5165d6ddc89",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "title": "tell me about ramcharan",
@@ -58,6 +65,14 @@
       "size": 245365,
       "chunk_count": 4,
       "created_at": "2026-10-12T07:58:05.334Z"
+    },
+    {
+      "id": "d0c20000-2222-4444-8888-000000000002",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "name": "AI_Engineer_Job_Specification.pdf",
+      "size": 154200,
+      "chunk_count": 2,
+      "created_at": "2026-10-15T14:21:00.139Z"
     }
   ],
   "chunks": [
@@ -88,6 +103,20 @@
       "user_id": "00000000-0000-0000-0000-000000000001",
       "page": 1,
       "content": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM SkillsBuild, Feb 2026. • NASSCOM FutureSkills Prime — Digital Application Fundamentals (STEM). • Data Analytics Internship — Oasis Infobyte. A C H I EV EM E NT S • HackHazards 2026 — Participant, June 2026. A D D I T I O N A L Languages: English, Telugu, Hindi"
+    },
+    {
+      "id": "chunk-doc2-001",
+      "document_id": "d0c20000-2222-4444-8888-000000000002",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": "TechCorp Global — Senior AI & Full Stack Engineer Specification. Location: Hyderabad, India. Required Qualification: Bachelor of Technology (B.Tech) in Computer Science Engineering with minimum CGPA of 8.0. Role Overview: Looking for an engineer proficient in Python, Machine Learning, Natural Language Processing (NLP), and Full Stack technologies like React.js and Node.js."
+    },
+    {
+      "id": "chunk-doc2-002",
+      "document_id": "d0c20000-2222-4444-8888-000000000002",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "page": 1,
+      "content": "TechCorp Global Candidate Criteria: Preferred candidates have prior Data Analytics Internship experience, practical experience with smart healthcare or IoT systems, and proven projects in Plagiarism Detection or Agriculture monitoring. Salary package: 14 to 18 LPA with stock options and remote work flexibility."
     }
   ],
   "messages": [
@@ -3007,6 +3036,310 @@
         }
       },
       "created_at": "2026-10-15T13:27:41.948Z"
+    },
+    {
+      "id": "037f4d36-3057-47da-a57b-c8bc6a178de4",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "n2N0AXdhYELKT3GU",
+      "role": "user",
+      "parts": {
+        "id": "n2N0AXdhYELKT3GU",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "where did the ramcharan did internship"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:07:56.279Z"
+    },
+    {
+      "id": "72ad704a-7fca-480b-bbe6-ac0532ef20f3",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "hUjwAuOvSsd1MPKy",
+      "role": "assistant",
+      "parts": {
+        "id": "hUjwAuOvSsd1MPKy",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "రాంచరణ్ తన ఇంటర్న్‌షిప్‌ను **Oasis Infobyte** లో పూర్తి చేసారు [1], [2], [3]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " income, age, spending, and purchase behavior. Week 5 12 June – 15 June 2026 Performed customer segmentation based on spending levels and categorized customers into Low, Medium, and High Spending groups. Interpreted key "
+            },
+            {
+              "n": 2,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": ". No. Contents Page No a Acknowledgement i b About Oasis Infobyte ii c Schedule iii d Abstract iv e List of Tables v f List of Figures vi 1. Introduction 1 2. Related work/ Technologies used 3 3. Work done/ Observation/ "
+            },
+            {
+              "n": 3,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "w Delhi) Cheeryal (V), Keesara (M), Medchal Dist. – 501 301. DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING Accredited by NBA DECLARATION BY THE CANDIDATE I, S.RAMCHARAN, bearing Roll No. 24R11A05X1, hereby declare that "
+            },
+            {
+              "n": 4,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "g charts and visualizations using Matplotlib and Seaborn. Identifying and correcting issues such as missing values, duplicate records, and data-processing errors. Organizing project files, datasets, notebooks, and docume"
+            },
+            {
+              "n": 5,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "gle Play Store Data Analysis. The Customer Segmentation Analysis project involved data cleaning, exploratory data analysis, customer spending analysis, purchase behavior analysis, campaign response analysis, correlation "
+            },
+            {
+              "n": 6,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "ENCE AND ENGINEERING Accredited by NBA CERTIFICATE This is to certify that the Internship Report entitled “Data Analytics Using Python: Customer Segmentation, McDonald’s Nutrition Analysis and Google Play Store Analysis”"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:08:03.605Z"
+    },
+    {
+      "id": "ccd0536c-111a-48ae-8519-db8158fffb49",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "bxRemRTdsF6GPVP7",
+      "role": "user",
+      "parts": {
+        "id": "bxRemRTdsF6GPVP7",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "where did the Ram Charan did intership"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:08:27.719Z"
+    },
+    {
+      "id": "353dd360-d360-4e89-9ddc-048d549dc599",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "TDL8PgHDlXTIXhRS",
+      "role": "assistant",
+      "parts": {
+        "id": "TDL8PgHDlXTIXhRS",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on the provided documents, S. Ramcharam did his Data Analytics Internship at **Oasis Infobyte** [3]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " of different columns. Inspecting the dataset before performing further analysis. 3.1.4 Data Cleaning and Preprocessing The next stage involved cleaning and preparing the dataset for analysis. Data quality was checked to"
+            },
+            {
+              "n": 2,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "cal outcomes were produced correctly. Testing and debugging helped improve the reliability and accuracy of the completed projects. It also provided practical experience in identifying errors, correcting data-processing i"
+            },
+            {
+              "n": 3,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " income, age, spending, and purchase behavior. Week 5 12 June – 15 June 2026 Performed customer segmentation based on spending levels and categorized customers into Low, Medium, and High Spending groups. Interpreted key "
+            },
+            {
+              "n": 4,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " demographics, spending, and purchasing behavior. Visual Studio Code Used for writing, editing, and managing project files and documentation. GitHub Used to organize, maintain, and submit the completed projects. Table 3."
+            },
+            {
+              "n": 5,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "ing Testing and debugging were carried out during the development of all three data analytics projects: Customer Segmentation Analysis, McDonald’s Nutrition Data Analysis, and Google Play Store Data Analysis. The Python "
+            },
+            {
+              "n": 6,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "rk carried out, including data loading, data cleaning, exploratory data analysis, customer spending analysis, purchase behavior analysis, campaign response analysis, customer segmentation, and correlation analysis. Chapt"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:08:35.506Z"
+    },
+    {
+      "id": "d1d906ba-1823-4979-9918-aa99b0878e42",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "yAyWyeb28Qy50wyR",
+      "role": "user",
+      "parts": {
+        "id": "yAyWyeb28Qy50wyR",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Kiran kahan uska internship Kiya Hai"
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:08:45.240Z"
+    },
+    {
+      "id": "cf7f079f-de07-434c-8752-dbd1c42db00d",
+      "thread_id": "c19be809-7341-46b6-a26e-dedaa65d2acb",
+      "user_id": "b3f4c37c-b817-4a26-a0ec-ebe14d6ddc9e",
+      "ui_id": "22pqL7yc6PtX69Bw",
+      "role": "assistant",
+      "parts": {
+        "id": "22pqL7yc6PtX69Bw",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "किरण (एस. रामचरण) ने अपनी इंटर्नशिप **Oasis Infobyte** में पूरी की है [1], [5]। उन्होंने यह इंटर्नशिप डेटा एनालिटिक्स के क्षेत्र में की है [2], [6]।"
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": ". No. Contents Page No a Acknowledgement i b About Oasis Infobyte ii c Schedule iii d Abstract iv e List of Tables v f List of Figures vi 1. Introduction 1 2. Related work/ Technologies used 3 3. Work done/ Observation/ "
+            },
+            {
+              "n": 2,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": " income, age, spending, and purchase behavior. Week 5 12 June – 15 June 2026 Performed customer segmentation based on spending levels and categorized customers into Low, Medium, and High Spending groups. Interpreted key "
+            },
+            {
+              "n": 3,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "w Delhi) Cheeryal (V), Keesara (M), Medchal Dist. – 501 301. DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING Accredited by NBA DECLARATION BY THE CANDIDATE I, S.RAMCHARAN, bearing Roll No. 24R11A05X1, hereby declare that "
+            },
+            {
+              "n": 4,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "gle Play Store Data Analysis. The Customer Segmentation Analysis project involved data cleaning, exploratory data analysis, customer spending analysis, purchase behavior analysis, campaign response analysis, correlation "
+            },
+            {
+              "n": 5,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "t have not been submitted to any other University or Institute for the award of any other degree or diploma. S.RamCharan 24R11A05X1 ACKNOWLEDGEMENT I sincerely express my gratitude to Oasis Infobyte for giving me the opp"
+            },
+            {
+              "n": 6,
+              "document": "S.Ramcharam_intership_report.docx",
+              "page": null,
+              "snippet": "tion works in various technology areas, including web development, software development, cloud and infrastructure, data and analytics, cybersecurity, and other emerging technologies. Oasis Infobyte provides internship pr"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:08:50.407Z"
+    },
+    {
+      "id": "e67e5aae-afa3-4176-8d3e-82c2bafae08a",
+      "thread_id": "test-multidoc-thread-1792074120394",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-test-1",
+      "role": "user",
+      "parts": {
+        "id": "msg-test-1",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Does Ramcharan meet the criteria for the TechCorp AI Engineer job? Compare his qualifications, CGPA, projects, and internship experience across both documents."
+          }
+        ]
+      },
+      "created_at": "2026-10-15T14:22:00.453Z"
+    },
+    {
+      "id": "45c7cd97-1b63-4246-8c3a-aba52f608755",
+      "thread_id": "test-multidoc-thread-1792074120394",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "xDnRRbqUEMjrLQMh",
+      "role": "assistant",
+      "parts": {
+        "id": "xDnRRbqUEMjrLQMh",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Based on a comparison of **AI_Engineer_Job_Specification.pdf** and **Ramcharan_Sangamoni_Resume_Exact_Template.pdf**, **yes, Ramcharan Sangamoni meets all the required and preferred criteria** for the Senior AI & Full Stack Engineer role at TechCorp Global.\n\nBelow is a detailed comparison across the requested areas:\n\n---\n\n### 1. Qualifications & CGPA\n* **Job Specification Requirement:** Requires a Bachelor of Technology (B.Tech) in Computer Science Engineering with a minimum CGPA of 8.0 [4].\n* **Ramcharan's Resume:** He is pursuing a Bachelor of Technology in Computer Science Engineering (2024–2028) at Geetanjali College of Engineering and Technology with a CGPA of **8.33 / 10**, thereby meeting and exceeding the minimum academic requirement [2], [5].\n\n---\n\n### 2. Technical Skills\n* **Job Specification Requirement:** Looks for proficiency in Python, Machine Learning, Natural Language Processing (NLP), and Full Stack technologies such as React.js and Node.js [4].\n* **Ramcharan's Resume:** Lists Python, JavaScript, React.js, Node.js, Express.js, and MongoDB under technical skills [3], along with proven hands-on application of Machine Learning and NLP in his projects [2], [3], [6].\n\n---\n\n### 3. Internship Experience\n* **Job Specification Requirement:** Prefers candidates with prior Data Analytics Internship experience [1].\n* **Ramcharan's Resume:** Directly fulfills this preference, having served as a **Data Analytics Intern at Oasis Infobyte, Hyderabad**, where he applied data cleaning, exploratory data analysis, and scikit-learn on real-world datasets [3], [5], [6].\n\n---\n\n### 4. Projects & Domain Experience\n* **Job Specification Requirement:** Prefers candidates with practical experience in smart healthcare or IoT systems, as well as proven projects in Plagiarism Detection or Agriculture monitoring [1].\n* **Ramcharan's Resume:** Matches every specific domain mentioned:\n  * **Agriculture Monitoring & IoT:** Developed the **SmartCrop Monitor**, a smart agriculture application using Python, Machine Learning, and IoT devices to monitor crop health [6].\n  * **Smart Healthcare:** Developed the **Smart Medication Alert System**, a full-stack application managing medication schedules, prescriptions, and nurse alerts [2], [6].\n  * **Plagiarism Detection:** Built a **Plagiarism Detection System** utilizing Python, Flask, and NLP techniques for text preprocessing, similarity analysis, and scoring [2]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "AI_Engineer_Job_Specification.pdf",
+              "page": 1,
+              "snippet": "TechCorp Global Candidate Criteria: Preferred candidates have prior Data Analytics Internship experience, practical experience with smart healthcare or IoT systems, and proven projects in Plagiarism Detection or Agricult"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 4,
+              "document": "AI_Engineer_Job_Specification.pdf",
+              "page": 1,
+              "snippet": "TechCorp Global — Senior AI & Full Stack Engineer Specification. Location: Hyderabad, India. Required Qualification: Bachelor of Technology (B.Tech) in Computer Science Engineering with minimum CGPA of 8.0. Role Overview"
+            },
+            {
+              "n": 5,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 6,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-15T14:22:13.163Z"
     }
   ]
 }
