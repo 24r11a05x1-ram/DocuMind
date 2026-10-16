@@ -57,5 +57,42 @@ export async function ingestFile(file: File) {
       throw e;
     }
   }
+
+  // Seamlessly sync to /api/db so localDb also has full knowledge of the document
+  try {
+    const sessionRes = await supabase.auth.getSession();
+    const token = sessionRes.data.session?.access_token;
+    const authHeaders = token ? { Authorization: `Bearer ${token}` } : {};
+
+    await fetch("/api/db", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders },
+      body: JSON.stringify({
+        action: "docs_create",
+        payload: {
+          id: doc.id,
+          name: file.name,
+          size: file.size,
+          chunk_count: chunks.length,
+        },
+      }),
+    });
+
+    for (let i = 0; i < chunks.length; i += 200) {
+      await fetch("/api/db", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...authHeaders },
+        body: JSON.stringify({
+          action: "chunks_insert",
+          payload: {
+            chunks: chunks.slice(i, i + 200).map((c) => ({ ...c, document_id: doc.id })),
+          },
+        }),
+      });
+    }
+  } catch (syncErr) {
+    console.warn("Local sync warning (non-fatal):", syncErr);
+  }
+
   return doc;
 }

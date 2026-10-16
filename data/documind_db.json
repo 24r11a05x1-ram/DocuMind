@@ -15,6 +15,13 @@
   ],
   "threads": [
     {
+      "id": "7820a722-17fc-4fa5-99a0-6525c664fe45",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "title": "New chat",
+      "created_at": "2026-10-16T07:13:55.921Z",
+      "updated_at": "2026-10-16T07:13:55.921Z"
+    },
+    {
       "id": "2c99dd76-1ea6-4ba1-9cf7-0cecbade0635",
       "user_id": "00000000-0000-0000-0000-000000000001",
       "title": "New chat",
@@ -3540,6 +3547,82 @@
         }
       },
       "created_at": "2026-10-15T14:26:58.234Z"
+    },
+    {
+      "id": "3f7f4402-c6fc-4782-bc05-2126b2baf6c9",
+      "thread_id": "test-multidoc-thread-1792134835774",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "msg-test-1",
+      "role": "user",
+      "parts": {
+        "id": "msg-test-1",
+        "role": "user",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Does Ramcharan meet the criteria for the TechCorp AI Engineer job? Compare his qualifications, CGPA, projects, and internship experience across both documents."
+          }
+        ]
+      },
+      "created_at": "2026-10-16T07:13:55.926Z"
+    },
+    {
+      "id": "192973eb-b526-4c0e-9917-1de7408da188",
+      "thread_id": "test-multidoc-thread-1792134835774",
+      "user_id": "00000000-0000-0000-0000-000000000001",
+      "ui_id": "jGh0idMbVjdCXNp9",
+      "role": "assistant",
+      "parts": {
+        "id": "jGh0idMbVjdCXNp9",
+        "role": "assistant",
+        "parts": [
+          {
+            "type": "text",
+            "text": "Yes, Ramcharan meets the criteria for the TechCorp AI Engineer job [1], [2], [5], [6]. Below is a detailed comparison and synthesis of his qualifications against the job specification:\n\n### **Comparison and Synthesis**\n\n* **Qualifications & Education:**\n  * **From `AI_Engineer_Job_Specification.pdf`:** The role requires a Bachelor of Technology (B.Tech) in Computer Science Engineering with a minimum CGPA of 8.0 [6].\n  * **From `Ramcharan_Sangamoni_Resume_Exact_Template.pdf`:** Ramcharan is pursuing a Bachelor of Technology in Computer Science Engineering (2024–2028) at Geetanjali College of Engineering and Technology and holds a CGPA of 8.33 / 10, which exceeds the minimum requirement [1].\n\n* **Technical Skills & Role Overview:**\n  * **From `AI_Engineer_Job_Specification.pdf`:** The position requires proficiency in Python, Machine Learning, Natural Language Processing (NLP), and Full Stack technologies like React.js and Node.js [6].\n  * **From `Ramcharan_Sangamoni_Resume_Exact_Template.pdf`:** Ramcharan's technical skill set lists core languages like Python, Java, and JavaScript, along with frameworks and tools such as React.js, Node.js, Express.js, and MongoDB [2]. \n\n* **Internship Experience:**\n  * **From `AI_Engineer_Job_Specification.pdf`:** Preferred candidates should have prior Data Analytics Internship experience [5].\n  * **From `Ramcharan_Sangamoni_Resume_Exact_Template.pdf`:** Ramcharan completed a Data Analytics Internship at Oasis Infobyte (May 2026 – June 2026), where he worked with Python, pandas, NumPy, Matplotlib, and scikit-learn [1], [3].\n\n* **Preferred Projects:**\n  * **From `AI_Engineer_Job_Specification.pdf`:** TechCorp Global looks for candidates with practical experience in smart healthcare or IoT systems, and proven projects in Plagiarism Detection or Agriculture monitoring [5].\n  * **From `Ramcharan_Sangamoni_Resume_Exact_Template.pdf`:** Ramcharan directly matches these specific preferences with multiple projects:\n    * **Agriculture monitoring:** Developed *SmartCrop Monitor* using Python, Machine Learning, and IoT devices [3].\n    * **Smart healthcare/systems:** Developed *Smart Medication Alert System* (full-stack web app with nurse alert and prescription management) [3], [4].\n    * **Plagiarism Detection:** Developed a *Plagiarism Detection System* utilizing Python, Flask, and NLP techniques [4]."
+          }
+        ],
+        "metadata": {
+          "sources": [
+            {
+              "n": 1,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": ". E D UC A T I O N Bachelor of Technology, Computer Science Engineering 2024 – 2028 CGPA: 8.33 / 10 • Geetanjali College of Engineering and Technology C E R T I FI C AT I O N S • Introduction to Generative AI — IBM Skill"
+            },
+            {
+              "n": 2,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "Ramcharan Sangamoni COMPUTER SCIENCE ENGINEER Hyderabad, Telangana • +91 6305206316 • 24r11a05x1@gcet.edu.in • linkedin.com/in/ramcharan -sanganamoni- a2a680389 • github.com/24r11a05x1 -ram P R O F ES S I O N A L S U M M"
+            },
+            {
+              "n": 3,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t, Adaptability, Quick Learning, Leadership P R O F ES S I O N A L E X P E R I E N C E Data Analytics Intern — Oasis Infobyte, Hyderabad 05 May 2026 – 15 Jun 2026 • Completed a data analytics internship focused on practi"
+            },
+            {
+              "n": 4,
+              "document": "Ramcharan_Sangamoni_Resume_Exact_Template.pdf",
+              "page": 1,
+              "snippet": "t.js, TypeScript, Node.js, Express.js, MongoDB, HTML, CSS, JavaScript • Developed a full-stack web application to help users manage medication schedules through timely reminders, secure authentication, prescription manag"
+            },
+            {
+              "n": 5,
+              "document": "AI_Engineer_Job_Specification.pdf",
+              "page": 1,
+              "snippet": "TechCorp Global Candidate Criteria: Preferred candidates have prior Data Analytics Internship experience, practical experience with smart healthcare or IoT systems, and proven projects in Plagiarism Detection or Agricult"
+            },
+            {
+              "n": 6,
+              "document": "AI_Engineer_Job_Specification.pdf",
+              "page": 1,
+              "snippet": "TechCorp Global — Senior AI & Full Stack Engineer Specification. Location: Hyderabad, India. Required Qualification: Bachelor of Technology (B.Tech) in Computer Science Engineering with minimum CGPA of 8.0. Role Overview"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-16T07:14:10.644Z"
     }
   ]
 }

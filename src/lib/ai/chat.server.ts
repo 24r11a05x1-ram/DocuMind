@@ -226,54 +226,155 @@ export async function handleChat(request: Request) {
     }
   }
 
-  // 2. Retrieval: Search Chunks
-  let hits: any[] = [];
-  if (supabase && !isExpiredDomain) {
-    try {
-      const { data } = await supabase.rpc("search_chunks", {
-        q: searchKeywords,
-        k: selectedDocIds && selectedDocIds.length > 1 ? 12 : 8,
-      });
-      if (data && data.length > 0) {
-        if (selectedDocIds && selectedDocIds.length > 0) {
-          hits = data.filter((d: any) => selectedDocIds.includes(d.document_id));
-        } else {
-          hits = data;
-        }
-      }
-    } catch {}
-  }
+  // 2. High-Accuracy Multi-Document Retrieval Engine
+  const STOP_WORDS = new Set([
+    "the", "is", "at", "which", "on", "a", "an", "and", "or", "to", "in",
+    "for", "with", "about", "of", "by", "from", "as", "what", "give", "tell",
+    "me", "how", "why", "when", "who", "where", "can", "you", "does", "did",
+    "their", "his", "her", "its", "are", "were", "been", "has", "have", "had",
+    "this", "that", "these", "those", "both", "attached", "document", "documents", "file", "files",
+    "show", "provide", "list", "summarize", "summary", "explain", "describe", "compare", "between"
+  ]);
 
-  // Fallback / complement with localDb chunk search
-  if (!hits || hits.length === 0) {
-    hits = localDb.searchChunks(searchKeywords, selectedDocIds && selectedDocIds.length > 1 ? 12 : 8, selectedDocIds);
-  }
+  const cleanTerms = (text: string) =>
+    text
+      .toLowerCase()
+      .split(/\s+/)
+      .map((t) => t.replace(/[^\w\u0C00-\u0C7F]/g, ""))
+      .filter((t) => t.length > 1);
 
-  // If 0 hits with translated keywords, try searching original question
-  if ((!hits || hits.length === 0) && searchKeywords !== question) {
+  const rawKeywords = Array.from(new Set([...cleanTerms(searchKeywords), ...cleanTerms(question)]));
+  const searchTokens = rawKeywords.filter((t) => !STOP_WORDS.has(t));
+  const activeTokens = searchTokens.length > 0 ? searchTokens : rawKeywords;
+
+  // Determine target document IDs (either explicitly attached or recent user documents)
+  let targetDocIds = selectedDocIds;
+  if (!targetDocIds || targetDocIds.length === 0) {
     if (supabase && !isExpiredDomain) {
       try {
-        const fallbackSearch = await supabase.rpc("search_chunks", {
-          q: question,
-          k: selectedDocIds && selectedDocIds.length > 1 ? 12 : 8,
-        });
-        if (fallbackSearch.data && fallbackSearch.data.length > 0) {
-          hits = selectedDocIds ? fallbackSearch.data.filter((d: any) => selectedDocIds.includes(d.document_id)) : fallbackSearch.data;
+        const { data: userDocs } = await supabase
+          .from("documents")
+          .select("id, name")
+          .order("created_at", { ascending: false })
+          .limit(4);
+        if (userDocs && userDocs.length > 0) {
+          targetDocIds = userDocs.map((d: any) => d.id);
         }
       } catch {}
     }
-    if (!hits || hits.length === 0) {
-      hits = localDb.searchChunks(question, selectedDocIds && selectedDocIds.length > 1 ? 12 : 8, selectedDocIds);
+    if (!targetDocIds || targetDocIds.length === 0) {
+      const localDocs = localDb.getDocuments();
+      if (localDocs && localDocs.length > 0) {
+        targetDocIds = localDocs.map((d) => d.id);
+      }
     }
   }
 
-  // If still 0 hits, fetch top document chunks for the selected docs
-  if (!hits || hits.length === 0) {
-    hits = localDb.getChunks(8);
-    if (selectedDocIds && selectedDocIds.length > 0) {
-      const filtered = hits.filter((h) => selectedDocIds.includes(h.document_id));
-      if (filtered.length > 0) hits = filtered;
+  interface CandidateChunk {
+    id: string;
+    document_id: string;
+    document_name: string;
+    page: number | null;
+    content: string;
+  }
+  let candidateChunks: CandidateChunk[] = [];
+
+  // Query Supabase chunks directly if authenticated
+  if (supabase && !isExpiredDomain) {
+    try {
+      let query = supabase.from("chunks").select("id, document_id, page, content, documents!inner(name)");
+      if (targetDocIds && targetDocIds.length > 0) {
+        query = query.in("document_id", targetDocIds);
+      }
+      const { data: rawChunks } = await query.limit(300);
+      if (rawChunks && rawChunks.length > 0) {
+        candidateChunks = rawChunks.map((c: any) => ({
+          id: c.id,
+          document_id: c.document_id,
+          document_name: c.documents?.name || "Document",
+          page: c.page,
+          content: c.content,
+        }));
+      }
+    } catch (e) {
+      console.warn("Supabase direct chunks query failed:", e);
     }
+  }
+
+  // Fallback / complement with localDb chunks
+  if (!candidateChunks.length) {
+    const dbDocs = new Map(localDb.getDocuments().map((d) => [d.id, d.name]));
+    const localAll = localDb.getChunks(500);
+    const eligible = targetDocIds && targetDocIds.length > 0
+      ? localAll.filter((c) => targetDocIds.includes(c.document_id))
+      : localAll;
+    candidateChunks = eligible.map((c) => ({
+      id: c.id,
+      document_id: c.document_id,
+      document_name: dbDocs.get(c.document_id) || c.document_name || "Document",
+      page: c.page,
+      content: c.content,
+    }));
+  }
+
+  // Score candidate chunks
+  const scoredChunks = candidateChunks.map((c) => {
+    const lower = c.content.toLowerCase();
+    let score = 0;
+
+    // Exact phrase match bonus
+    if (activeTokens.length > 1) {
+      const phrase = activeTokens.join(" ");
+      if (lower.includes(phrase)) score += 20;
+    }
+
+    // Token occurrences
+    for (const token of activeTokens) {
+      if (lower.includes(token)) {
+        const matches = lower.split(token).length - 1;
+        score += matches * 4 + token.length;
+      }
+    }
+
+    // Early page boost (page 1, 2) for summary/title/certificate
+    if (c.page && c.page <= 2) {
+      score += 2;
+    }
+
+    return {
+      ...c,
+      score,
+    };
+  });
+
+  // Group chunks by document so EACH document is guaranteed an equal quota
+  const chunksByDoc = new Map<string, typeof scoredChunks>();
+  for (const item of scoredChunks) {
+    if (!chunksByDoc.has(item.document_id)) {
+      chunksByDoc.set(item.document_id, []);
+    }
+    chunksByDoc.get(item.document_id)!.push(item);
+  }
+
+  const activeDocIdsList = targetDocIds && targetDocIds.length > 0
+    ? targetDocIds.filter((id) => chunksByDoc.has(id))
+    : Array.from(chunksByDoc.keys());
+
+  const effectiveDocCount = Math.max(1, activeDocIdsList.length);
+  const perDocQuota = Math.max(3, Math.floor(14 / effectiveDocCount));
+  const hits: Array<CandidateChunk & { score: number }> = [];
+
+  for (const docId of activeDocIdsList) {
+    const docItems = chunksByDoc.get(docId) || [];
+    docItems.sort((a, b) => b.score - a.score || (a.page || 0) - (b.page || 0));
+
+    const selectedForDoc = docItems.slice(0, perDocQuota);
+    hits.push(...selectedForDoc);
+  }
+
+  // Fallback if no hits were found
+  if (!hits.length && candidateChunks.length) {
+    hits.push(...candidateChunks.slice(0, 8).map((c) => ({ ...c, score: 0.1 })));
   }
 
   const sources: Source[] = (hits ?? []).map((h, i) => ({
@@ -526,7 +627,7 @@ ${context || "(no relevant excerpts were found)"}`;
 
       answerContent += `#### 🔍 **Cross-Document Synthesis & Findings:**\n`;
       answerContent += `The attached documents provide complementary information. Details extracted from **${docNamesInHits[0]}** directly correlate with facts outlined in **${docNamesInHits[1] || docNamesInHits[0]}**. Refer to the inline citations above for corresponding context.\n\n`;
-    } else {
+    } else if (hits.length > 0 && hits[0]) {
       const primary = hits[0];
       const secondary = hits.slice(1);
       answerContent = `Based on your uploaded document (**${primary.document_name}**)${primary.page ? ` (page ${primary.page})` : ""}:\n\n`;

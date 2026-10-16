@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Check, FileText, Layers, Loader2, Paperclip, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -142,21 +142,29 @@ function ChatWindow({ threadId, initial }: { threadId: string; initial: Msg[] })
   const selectAllDocs = () => setSelectedDocIds(availableDocs.map((d) => d.id));
   const clearDocs = () => setSelectedDocIds([]);
 
+  const selectedDocIdsRef = useRef<string[]>([]);
+  selectedDocIdsRef.current = selectedDocIds;
+
   const transport = useMemo(
     () =>
       new DefaultChatTransport<Msg>({
         api: "/api/chat",
-        body: {
-          threadId,
-          language: langName,
-          documentIds: selectedDocIds.length > 0 ? selectedDocIds : undefined,
+        prepareSendMessagesRequest: ({ messages }) => {
+          return {
+            body: {
+              threadId,
+              language: langName,
+              documentIds: selectedDocIdsRef.current.length > 0 ? selectedDocIdsRef.current : undefined,
+              messages,
+            },
+          };
         },
         headers: async (): Promise<Record<string, string>> => {
           const { data } = await supabase.auth.getSession();
           return data.session ? { Authorization: `Bearer ${data.session.access_token}` } : {};
         },
       }),
-    [threadId, langName, selectedDocIds],
+    [threadId, langName],
   );
 
   const { messages, sendMessage, status, stop } = useChat<Msg>({

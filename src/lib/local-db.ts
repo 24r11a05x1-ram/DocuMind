@@ -238,10 +238,10 @@ export const localDb = {
     );
   },
 
-  createDocument(userId: string, doc: { name: string; size: number; chunk_count: number }): LocalDocument {
+  createDocument(userId: string, doc: { id?: string; name: string; size: number; chunk_count: number }): LocalDocument {
     const db = ensureDbFile();
     const newDoc: LocalDocument = {
-      id: crypto.randomUUID(),
+      id: doc.id || crypto.randomUUID(),
       user_id: userId,
       name: doc.name,
       size: doc.size,
@@ -301,11 +301,23 @@ export const localDb = {
 
     if (!eligibleChunks.length) return [];
 
-    const terms = query
+    const STOP_WORDS = new Set([
+      "the", "is", "at", "which", "on", "a", "an", "and", "or", "to", "in",
+      "for", "with", "about", "of", "by", "from", "as", "what", "give", "tell",
+      "me", "how", "why", "when", "who", "where", "can", "you", "does", "did",
+      "their", "his", "her", "its", "are", "were", "been", "has", "have", "had",
+      "this", "that", "these", "those", "both", "attached", "document", "documents", "file", "files",
+      "show", "provide", "list", "summarize", "summary", "explain", "describe", "compare", "between"
+    ]);
+
+    const rawTerms = query
       .toLowerCase()
       .split(/\s+/)
       .map((t) => t.replace(/[^\w\u0C00-\u0C7F]/g, "")) // preserve English & Telugu Unicode
       .filter((t) => t.length > 1);
+
+    const filteredTerms = rawTerms.filter((t) => !STOP_WORDS.has(t));
+    const terms = filteredTerms.length > 0 ? filteredTerms : rawTerms;
 
     if (!terms.length) {
       if (targetDocIds && targetDocIds.length > 1) {
@@ -337,11 +349,21 @@ export const localDb = {
     const scored = eligibleChunks.map((c) => {
       const lower = c.content.toLowerCase();
       let score = 0;
+
+      // Phrase match bonus
+      if (terms.length > 1 && lower.includes(terms.join(" "))) {
+        score += 20;
+      }
+
       for (const term of terms) {
         if (lower.includes(term)) {
           const matches = lower.split(term).length - 1;
-          score += matches * 2 + term.length;
+          score += matches * 4 + term.length;
         }
+      }
+
+      if (c.page && c.page <= 2) {
+        score += 2;
       }
       return {
         id: c.id,
